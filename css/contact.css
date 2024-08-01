@@ -1,0 +1,176 @@
+/*
+Template Name:Coffee berry
+File: Layout CSS
+Author: Templates On Web
+Author URI: http://templateonweb.com/
+Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152">Website Template Licence</a>
+*/
+
+/********************* contact_main ****************/
+#contact_main{ 
+ background-image: url(../img/73.jpg);
+ padding-bottom: 180px;
+ padding-top: 180px;
+ background-repeat: no-repeat;
+ background-size: cover;
+ }
+.about_1{ 
+ background-color: #fecb38c4;
+ width: 30%;
+ text-align: center;
+ padding: 15px 20px 2px 10px;
+ }
+.about_1 h2{ 
+ color: #000;
+ font-weight:bold;
+ }
+.about_1 i{ 
+ color: #000;
+ padding-left:5px;
+ }
+.about_1 p a{ 
+ color: #000;
+ }
+.about_1 p a:hover{ 
+ color: #fff;
+ }
+/********************* contact_main_end ****************/
+/********************* contact ****************/
+#contact{ 
+ padding-top: 30px;
+ padding-bottom:40px;
+ background-color: black;
+ }
+.contact_2 h4 {
+ color: #fecb38;
+ font-weight: bold;
+ padding-bottom: 10px;
+}
+.contact_2 h2 {
+ color: #fff;
+ font-weight: bold;
+ padding-bottom:20px;
+}
+.contact_2 h2 a {
+ color: #2d4a8a;
+}
+.contact_4 i{ 
+ background-color: #fecb38;
+ text-align: center;
+ color: #000;
+ font-size: 25px;
+ border-radius: 50%;
+ width: 2.4em!important;
+ height: 2.4em!important;
+ line-height: 2.5em;
+ }
+.contact_5 h3{ 
+ padding-top:7px;
+ font-weight:bold;
+ color: #fff;
+ }
+.contact_5 p{ 
+ padding:0px;
+ margin:0px;
+ color: #b3b1b1;
+ }
+.contact_3{  
+ border-bottom: 2px solid #2b2a2a;
+ padding-bottom:25px;
+ padding-top:20px;
+ }
+.contact_6{  
+ padding-top:20px;
+ }
+.contact_7 h2 {
+ padding-bottom: 15px;
+} 
+.contact_7 h4 {
+ color: #fecb38;
+ font-weight: bold;
+ padding-bottom: 10px;
+}
+.contact_7 h2{
+ color: #fff;
+ font-weight: bold;
+ padding-bottom: 20px;
+}
+#contact .form-control {
+ font-size: 20px;
+ background-color: #fecb38;
+ color: #000;
+}
+#contact .form-control::placeholder{
+ color: #000;
+}
+.contact_8 input {
+ padding-top: 25px;
+ padding-bottom: 25px;
+ margin-bottom: 10px;
+}
+.contact_9 textarea {
+ height: 155px;
+ width: 100%;
+}
+.contact_10 ul{ 
+ padding-top:20px;
+ }
+/********************* contact_end ****************/
+
+
+
+
+@media screen and (max-width : 767px){
+#contact_main {
+ padding-bottom: 80px;
+ padding-top: 80px;
+}
+.about_1 {
+ width: 80%;
+}
+#contact {
+ text-align: center;
+}
+}
+ 
+@media (min-width:768px) and (max-width:960px) { 
+.contact_4 i {
+ font-size: 20px;
+ border-radius: 50%;
+ width: 2.2em!important;
+ height: 2.2em!important;
+ line-height: 2.3em;
+}
+.contact_5 h3 {
+ padding-top: 3px;
+ font-size: 20px;
+ padding-left: 5px;
+}
+.contact_5 p {
+ font-size: 16px;
+ padding-top: 2px;
+}
+} 
+
+@media (min-width:961px) and (max-width:1200px) {
+.contact_4 i {
+ font-size: 20px;
+ border-radius: 50%;
+ width: 2.2em!important;
+ height: 2.2em!important;
+ line-height: 2.3em;
+}
+.contact_5 h3 {
+ padding-top: 3px;
+ font-size: 20px;
+ padding-left: 5px;
+}
+.contact_5 p {
+ font-size: 16px;
+ padding-top: 2px;
+}
+}
+
+@media (min-width:1201px) and (max-width:1320px) {
+
+}

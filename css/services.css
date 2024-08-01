@@ -1,0 +1,153 @@
+/*
+Template Name:Coffee berry
+File: Layout CSS
+Author: Templates On Web
+Author URI: http://templateonweb.com/
+Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152">Website Template Licence</a>
+*/
+
+/********************* services_main ****************/
+#services_main{ 
+ background-image: url(../img/49.jpg);
+ padding-bottom: 180px;
+ padding-top: 180px;
+ background-repeat: no-repeat;
+ background-size: cover;
+ }
+.about_1{ 
+ background-color: #fecb38c4;
+ width: 30%;
+ text-align: center;
+ padding: 15px 20px 2px 10px;
+ }
+.about_1 h2{ 
+ color: #000;
+ font-weight:bold;
+ }
+.about_1 i{ 
+ color: #000;
+ padding-left:5px;
+ }
+.about_1 p a{ 
+ color: #000;
+ }
+.about_1 p a:hover{ 
+ color: #fff;
+ }
+/********************* services_main_end ****************/
+/********************* services ****************/
+#services{ 
+ padding-top: 20px;
+ padding-bottom: 160px;
+ background-color: black;
+ }
+.services_3 img{  
+ position: relative;
+ }
+.services_4{  
+ position: absolute;
+ box-shadow: 0 0 12px 0 rgb(37, 27, 0);
+ top: 60%;
+ background-color: #fecb38;
+ padding: 34px 50px 30px;
+ width: 88%;
+ left: 6%;
+ border-bottom: 3px solid #0a0a00;
+ text-align: center;
+ }
+.services_4 h4{  
+ color: #000;
+ padding-bottom: 4px;
+ font-weight: bold;
+ }
+.services_4:hover h4{  
+ color:#fff;
+ }
+.services_4:hover p{  
+ color:#fff;
+ }
+.services_4:hover a{  
+ color:#fff;
+ }
+.services_4 p{  
+ padding:0px;
+ margin:0px;
+ padding-top:7px;
+ padding-bottom:10px;
+ color: #505050;
+ }
+.services_4 a{  
+ color: #000;
+ font-size:18px;
+ }
+.services_4 i{  
+ padding-left: 5px;
+ }
+.services_4:hover{ 
+ background-color:#263045;
+ }
+.services_2{ 
+ padding-top:30px;
+ }
+.services_6{ 
+ padding-top:150px;
+ }
+/********************* services_end ****************/
+
+
+
+
+@media screen and (max-width : 767px){
+#services_main {
+ padding-bottom: 80px;
+ padding-top: 80px;
+}
+.about_1 {
+ width: 80%;
+}
+.services_4 {
+ position: static;
+ width: 100%;
+}
+.services_6 {
+ padding-top: 10px;
+}
+#services {
+ padding-top: 20px;
+ padding-bottom: 40px;
+}
+}
+ 
+@media (min-width:768px) and (max-width:960px) { 
+.services_4 h4 {
+ padding-bottom: 0px;
+ font-size: 20px;
+}
+.services_4 p {
+ padding-top: 5px;
+ padding-bottom: 3px;
+ font-size: 14px;
+}
+.services_4 {
+ padding: 20px 50px 20px;
+}
+} 
+
+@media (min-width:961px) and (max-width:1200px) {
+.services_4 h4 {
+ padding-bottom: 0px;
+ font-size: 20px;
+}
+.services_4 p {
+ padding-top: 5px;
+ padding-bottom: 3px;
+ font-size: 14px;
+}
+.services_4 {
+ padding: 20px 50px 20px;
+}
+}
+
+@media (min-width:1201px) and (max-width:1320px) {
+
+}
