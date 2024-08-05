@@ -205,3 +205,62 @@ Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152
 @media (min-width:1201px) and (max-width:1320px) {
 
 }
+
+
+.about-section {
+  padding: 50px;
+  background-color: #fff;
+  }
+  
+  .about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  }
+  
+  .about-item {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  }
+  
+  .about-item:hover {
+  transform: translateY(-10px);
+  }
+  
+  .about-image img {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  margin-right: 20px;
+  transition: transform 0.3s ease-in-out;
+  }
+  
+  .about-content h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  }
+  
+  .about-content h3 {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #BD9867;
+  font-weight: bold;
+  }
+  
+  .about-content p {
+  margin: 10px 0 0;
+  font-size: 16px;
+  line-height: 1.5;
+  }
+  
+  .about-item:hover .about-image img {
+  transform: rotate(10deg);
+  }
