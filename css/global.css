@@ -209,10 +209,10 @@ color:#fecb38;
 #footer{ 
  padding-top:30px;
  padding-bottom:30px;
- background: #111 none repeat scroll 0 0;
+ background:#BD9867;
  }
 .footer_1 h3{ 
- color: #deaf26;
+ color: black;
  font-weight: bold;
  letter-spacing: 2px;
  padding-bottom: 10px;
@@ -226,7 +226,7 @@ color:#fecb38;
  color: #deaf26;
  }
 .footer_2 h3{ 
- color: #deaf26;
+ color: black;
  font-weight: bold;
  letter-spacing: 2px;
  padding-bottom: 10px;
@@ -393,4 +393,10 @@ color:#fecb38;
 
 @media (min-width:1201px) and (max-width:1320px) {
 
+}
+
+.footerlogosize{
+    height: 60px;
+    width:140px;
+    
 }
