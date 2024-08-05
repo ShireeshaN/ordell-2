@@ -6,7 +6,7 @@ Author URI: http://templateonweb.com/
 Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152">Website Template Licence</a>
 */
 body{
-font-family: 'Philosopher', sans-serif; 
+font-family: "Roboto"; 
    }
 
 a{ 
@@ -107,18 +107,18 @@ color: #f26367;
 #header .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
 color: #fecb38;
 background: none;
-font-size: 16px;
+font-size: 12px;
 }
 #header .navbar-default .navbar-nav>li>a:hover{
 color: #fecb38;
 }
 #header .navbar-default .navbar-nav>li>a{
 color: #fff;
-font-size:16px;
+font-size:12px;
 }
 #header .navbar-header i{
 color: #fecb38;
-font-size: 30px;
+font-size: 12px;
 }
 #header .navbar-brand {
 padding: 0px;
