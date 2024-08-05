@@ -13,6 +13,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
    <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 
 <body>
@@ -96,6 +98,87 @@
   </div>
  </div>
 </section>
+
+
+<div class="container">
+    <div class="row image-content-section">
+        <div class="col-md-4">
+            <img src="https://via.placeholder.com/400x300" alt="Example Image">
+        </div>
+        <div class="col-md-8 content">
+            <h2>Beautiful Interiors</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Phasellus non commodo lorem. Duis nec semper nisi. Fusce posuere malesuada risus, a elementum sapien consequat nec.</p>
+        </div>
+    </div>
+
+    <div class="row image-content-section">
+        <div class="col-md-8 content">
+            <h2>Exceptional Design</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Phasellus non commodo lorem. Duis nec semper nisi. Fusce posuere malesuada risus, a elementum sapien consequat nec.</p>
+        </div>
+        <div class="col-md-4">
+            <img src="https://via.placeholder.com/400x300" alt="Example Image">
+        </div>
+    </div>
+
+    <div class="row image-content-section">
+        <div class="col-md-4">
+            <img src="https://via.placeholder.com/400x300" alt="Example Image">
+        </div>
+        <div class="col-md-8 content">
+            <h2>Innovative Solutions</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Phasellus non commodo lorem. Duis nec semper nisi. Fusce posuere malesuada risus, a elementum sapien consequat nec.</p>
+        </div>
+    </div>
+</div>
+
+
+<style>
+	.image-content-section {
+		display: flex;
+		align-items: center;
+		margin: 50px 0;
+		padding: 20px;
+		background-color: #f8f9fa;
+		border-radius: 10px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		transition: transform 0.3s ease-in-out;
+	}
+	.image-content-section:hover {
+		transform: translateY(-10px);
+	}
+	.image-content-section img {
+		width: 100%;
+		border-radius: 10px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		border: 10px solid #ffffff;
+		transition: transform 0.5s ease;
+	}
+	.image-content-section img:hover {
+		transform: scale(1.05);
+	}
+	.image-content-section .content {
+		padding-left: 30px;
+		animation: fadeIn 2s ease;
+	}
+	.image-content-section .content h2 {
+		color: #1f2b7b;
+	}
+	.image-content-section .content p {
+		color: #333;
+	}
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+</style>
+
+
+
 <section id="about_inner">
    <div class="about_inner">
      <div class="container">
@@ -287,5 +370,8 @@
 </section>
 <script src="js/classie.js"></script> 
 <script src="js/cbpAnimatedHeader.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
