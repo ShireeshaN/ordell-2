@@ -78,3 +78,18 @@ if ( typeof define === 'function' && define.amd ) {
 }
 
 })( window );
+
+
+<script>
+	function toggleMenu() {
+		document.querySelector('nav ul').classList.toggle('show');
+	}
+
+	document.querySelectorAll('nav li').forEach(li => {
+		li.addEventListener('click', function () {
+			if (window.innerWidth <= 768) {
+				this.querySelector('.dropdown').classList.toggle('show');
+			}
+		});
+	});
+</script>
