@@ -27,7 +27,9 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-	<a class="navbar-brand" href="index.html"> <i class="fa fa-home"></i> Interior</a>
+	<!-- <a class="navbar-brand" href="index.html"> <i class="fa fa-home"></i> Interior</a> -->
+	 <img class="logosizes" src="img/ordelllogonew.png"/>
+
 	</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -87,51 +89,145 @@
 	</nav>
 </section>
 
+<section class="middles">
+	<div class="container">
+	 <div class="row">
+	  <div class="middle_1 clearfix">
+	   <div class="middle_2">
+		<h2>ORDELL INTERIORS</h2>
+		<p class="para1">Crafting Timeless Trends</p>
+	</div>
+</div>
+</div>
+</div>
+</section>
 
-<section id="center">
-  <div class="center">
-   <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
-  <div class="overlay"></div>
-  <ol class="carousel-indicators">
-    <li data-target="#bs-carousel" data-slide-to="0" class=""></li>
-    <li data-target="#bs-carousel" data-slide-to="1" class=""></li>
-    <li data-target="#bs-carousel" data-slide-to="2" class="active"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="item slides">
-      <div class="slide-1"></div>
-      <div class="hero">
-        <hgroup>
-            <h1>Sed Dignissim Lacinia</h1> 
-			 <h3>Vestibulum Lacinia Arcu Eget</h3>   
-			 <h4><a href="#">CONUDIA NOSTRA</a></h4>    
-        </hgroup>
-      </div>
+
+
+<section class="containers" id="center">
+	<div class="center">
+	  <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+		<div class="overlay"></div>
+		<ol class="carousel-indicators">
+		  <li data-target="#bs-carousel" data-slide-to="0" class=""></li>
+		  <li data-target="#bs-carousel" data-slide-to="1" class=""></li>
+		  <li data-target="#bs-carousel" data-slide-to="2" class="active"></li>
+		</ol>
+		<div class="carousel-inner curveslide">
+		  <div class="item slides">
+			<div class="slide-1"></div>
+			<div class="hero">
+			  <hgroup>
+				<h1>Sed Dignissim Lacinia</h1>
+				<h3>Vestibulum Lacinia Arcu Eget</h3>
+				<h4><a href="#">CONUDIA NOSTRA</a></h4>
+			  </hgroup>
+			</div>
+		  </div>
+		  <div class="item slides">
+			<div class="slide-2"></div>
+			<div class="hero">
+			  <hgroup>
+				<h1>Torquent Per Conubia Nostra</h1>
+				<h3>Vestibulum Lacinia Arcu Eget</h3>
+				<h4><a href="#">CONUDIA NOSTRA</a></h4>
+			  </hgroup>
+			</div>
+		  </div>
+		  <div class="item slides active">
+			<div class="slide-3"></div>
+			<div class="hero">
+			  <hgroup>
+				<h1>Fusce Nec Tellus Sed Augue</h1>
+				<h3>Vestibulum Lacinia Arcu Eget</h3>
+				<h4><a href="#">CONUDIA NOSTRA</a></h4>
+			  </hgroup>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+  
+  <section class="stats-section ">
+    <div class="stat">
+      <span class="count" id="projects-count">0</span>+ Projects
     </div>
-    <div class="item slides">
-      <div class="slide-2"></div>
-      <div class="hero">        
-        <hgroup>
-            <h1>Torquent Per Conubia Nostra</h1> 
-			 <h3>Vestibulum Lacinia Arcu Eget</h3>   
-			 <h4><a href="#">CONUDIA NOSTRA</a></h4>    
-        </hgroup>
-      </div>
+    <div class="stat">
+      <span class="count" id="team-count">0</span>+ Team
     </div>
-    <div class="item slides active">
-      <div class="slide-3"></div>
-      <div class="hero">        
-        <hgroup>
-            <h1>Fusce Nec Tellus Sed Augue</h1> 
-			 <h3>Vestibulum Lacinia Arcu Eget</h3>   
-			 <h4><a href="#">CONUDIA NOSTRA</a></h4>    
-        </hgroup>
-      </div>
+    <div class="stat">
+      <span class="count" id="experience-count">5</span>+ Experience
     </div>
-  </div> 
-  </div>
-  </div>
- </section>
+  </section>
+
+  <style>
+	.stats-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color:gray;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.stat {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.count {
+  font-weight: bold;
+  font-size: 2em;
+  color:white;
+}
+
+@media (max-width: 768px) {
+  .stats-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .stat {
+    margin-bottom: 20px;
+  }
+}
+  </style>
+ <script>
+	document.addEventListener('DOMContentLoaded', () => {
+  const counters = document.querySelectorAll('.count');
+
+  counters.forEach(counter => {
+    counter.textContent = '0';
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.textContent;
+      const increment = target / 100;
+
+      if (count < target) {
+        counter.textContent = Math.ceil(count + increment);
+        setTimeout(updateCount, 50); // Adjust the interval time for faster or slower counting
+      } else {
+        counter.textContent = target;
+      }
+    };
+
+    updateCount();
+  });
+});
+
+// Set data-target attributes dynamically
+document.getElementById('projects-count').setAttribute('data-target', '60');
+document.getElementById('team-count').setAttribute('data-target', '50');
+document.getElementById('experience-count').setAttribute('data-target', '5');
+
+ </script>
+
+
 <section id="middle">
  <div class="container">
   <div class="row">
