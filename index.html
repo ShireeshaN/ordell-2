@@ -100,8 +100,9 @@
 </div>
 </div>
 </div>
-
 </section>
+
+
 
 <section class="containers" id="center">
 	<div class="center">
@@ -148,69 +149,83 @@
 	</div>
   </section>
   
+  <section class="stats-section ">
+    <div class="stat">
+      <span class="count" id="projects-count">0</span>+ Projects
+    </div>
+    <div class="stat">
+      <span class="count" id="team-count">0</span>+ Team
+    </div>
+    <div class="stat">
+      <span class="count" id="experience-count">5</span>+ Experience
+    </div>
+  </section>
+
   <style>
-
-	.containers {
-  width: 100%; /* Full width to avoid extra space on the sides */
+	.stats-section {
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  height: 100vh; /* Full viewport height to center vertically */
-  margin: 0; /* Remove any default margin */
+  padding: 20px;
+  background-color:gray;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
-.center {
-  width: 80%; /* Adjust the width as needed */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.carousel {
-  width: 100%;
-}
-
-.hero {
+.stat {
+  font-size: 1.5em;
   text-align: center;
 }
 
-hgroup {
-  margin: 0;
-  padding: 0;
+.count {
+  font-weight: bold;
+  font-size: 2em;
+  color:white;
 }
-
-h1, h3, h4 {
-  margin: 10px 0;
-}
-
-h4 a {
-  color: #007bff;
-  text-decoration: none;
-}
-
 
 @media (max-width: 768px) {
-    .containers {
-      height: auto; /* Adjust height for mobile view */
-      padding: 20px 0; /* Add padding for spacing */
-    }
-
-    .center {
-      width: 100%; /* Full width for mobile */
-      padding: 0 10px; /* Add some padding for mobile view */
-    }
-
-    .hero h1, .hero h3, .hero h4 {
-      font-size: 1.2rem; /* Adjust font sizes for mobile */
-      margin: 5px 0; /* Adjust margins for mobile */
-    }
-
-    .hero h4 a {
-      font-size: 1rem; /* Adjust link font size for mobile */
-    }
+  .stats-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
   }
-</style>
-  
+
+  .stat {
+    margin-bottom: 20px;
+  }
+}
+  </style>
+ <script>
+	document.addEventListener('DOMContentLoaded', () => {
+  const counters = document.querySelectorAll('.count');
+
+  counters.forEach(counter => {
+    counter.textContent = '0';
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.textContent;
+      const increment = target / 100;
+
+      if (count < target) {
+        counter.textContent = Math.ceil(count + increment);
+        setTimeout(updateCount, 50); // Adjust the interval time for faster or slower counting
+      } else {
+        counter.textContent = target;
+      }
+    };
+
+    updateCount();
+  });
+});
+
+// Set data-target attributes dynamically
+document.getElementById('projects-count').setAttribute('data-target', '60');
+document.getElementById('team-count').setAttribute('data-target', '50');
+document.getElementById('experience-count').setAttribute('data-target', '5');
+
+ </script>
 
 
 <section id="middle">

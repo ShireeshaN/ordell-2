@@ -767,5 +767,69 @@ margin-bottom:16px;
 }
 
 .logosizes{
-  height: 50px;
+  height: 45px;
 }
+
+
+/*carousel curve*/
+.containers {
+  width: 100%; /* Full width to avoid extra space on the sides */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height to center vertically */
+  margin: 0; /* Remove any default margin */
+  
+}
+
+.center {
+  width: 80%; /* Adjust the width as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel {
+  width: 100%;
+}
+
+.hero {
+  text-align: center;
+}
+
+hgroup {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h3, h4 {
+  margin: 10px 0;
+}
+
+h4 a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+    .containers {
+      height: auto; /* Adjust height for mobile view */
+      padding: 20px 0; /* Add padding for spacing */
+    }
+
+    .center {
+      width: 100%; /* Full width for mobile */
+      padding: 0 10px; /* Add some padding for mobile view */
+    }
+
+    .hero h1, .hero h3, .hero h4 {
+      font-size: 1.2rem; /* Adjust font sizes for mobile */
+      margin: 5px 0; /* Adjust margins for mobile */
+    }
+
+    .hero h4 a {
+      font-size: 1rem; /* Adjust link font size for mobile */
+    }
+  }
+  /*carousel curve*/
