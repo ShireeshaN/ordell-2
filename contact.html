@@ -96,103 +96,44 @@
   </div>
  </div>
 </section>
-<section id="contact">
- <div class="container">
-  <div class="row">
-   <div class="contact_1 clearfix">
-    <div class="col-sm-5">
-	 <div class="contact_2">
-	  <h4>Come Visit Us At</h4>
-	  <h2>Our Address</h2>
-	 </div>
-	 <div class="contact_3 clearfix">
-	  <div class="col-sm-2 space_all">
-	   <div class="contact_4">
-	    <i class="fa fa-map-marker"></i>
-	   </div>
-	  </div>
-	  <div class="col-sm-10 space_all">
-	   <div class="contact_5">
-	    <h3>Office Address</h3>
-		<p>229 Young Street Irwin, PA 15642</p>
-	   </div>
-	  </div>
-	 </div>
-	 <div class="contact_3 clearfix">
-	  <div class="col-sm-2 space_all">
-	   <div class="contact_4">
-	    <i class="fa fa-phone"></i>
-	   </div>
-	  </div>
-	  <div class="col-sm-10 space_all">
-	   <div class="contact_5">
-	    <h3>Our Phone Number</h3>
-		<p>+12-323-778-4054</p>
-	   </div>
-	  </div>
-	 </div>
-	 <div class="contact_6 clearfix">
-	  <div class="col-sm-2 space_all">
-	   <div class="contact_4">
-	    <i class="fa fa-envelope"></i>
-	   </div>
-	  </div>
-	  <div class="col-sm-10 space_all">
-	   <div class="contact_5">
-	    <h3>Our Email</h3>
-		<p>info@example.com</p>
-	   </div>
-	  </div>
-	 </div>
-	</div>
-	<div class="col-sm-7">
-	 <div class="contact_7">
-	  <h4>Send Message</h4>
-	  <h2>Drop Us A Line</h2>
-	 </div>
-	 <div class="col-sm-12 space_all">
-	   <div class="col-sm-6">
-	    <div class="contact_8">
-		 <input type="text" class="form-control" placeholder="Your Name">
-		</div> 
-	   </div>
-	   <div class="col-sm-6">
-	    <div class="contact_8">
-		 <input type="text" class="form-control" placeholder="Your Phone">
-		</div> 
-	   </div>
-	  </div>
-	  <div class="col-sm-12 space_all">
-	   <div class="col-sm-6">
-	    <div class="contact_8">
-		 <input type="text" class="form-control" placeholder="Your Email">
-		</div> 
-	   </div>
-	   <div class="col-sm-6">
-	    <div class="contact_8">
-		 <input type="text" class="form-control" placeholder="Subject">
-		</div> 
-	   </div>
-	  </div>
-	  <div class="col-sm-12">
-	   <div class="contact_9">
-	    <textarea placeholder="Message" class="form-control"></textarea>
-	   </div>
-	  </div>
-	  <div class="col-sm-12">
-	   <div class="contact_10">
-	       <ul>
-	            <li><a href="#" class="button">SEND</a></li>
-	      </ul>
-	   </div>
-	  </div>
-	</div>
-   </div>
-  </div> 
- </div>
-</section>
+
+<div class="contact-section">
+	<h2>Contact Us</h2>
+	<form id="contactForm">
+		<div class="form-row">
+			<div class="form-group">
+				<label for="name">Your Name</label>
+				<input type="text" placeholder="Your Name *" id="name" name="name" required >
+				<span class="error-message" id="nameError">This field is required</span>
+			</div>
+			<div class="form-group">
+				<label for="email">Your Email</label>
+				<input type="email" placeholder="Your Email *" id="email" name="email" required>
+				<span class="error-message" id="emailError">This field is required</span>
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group">
+				<label for="phone">Phone Number</label>
+				<input type="tel" placeholder="Your Number *" id="phone" name="phone">
+			</div>
+			<div class="form-group">
+				<label for="subject">Subject</label>
+				<input type="text" placeholder="Subject *" id="subject" name="subject">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="message">Write Message</label>
+			<textarea id="message" placeholder="Your Message *" name="message" rows="5" required></textarea>
+			<span class="error-message" id="messageError">This field is required</span>
+		</div>
+		<button type="submit">Send Message</button>
+	</form>
+</div>
+
+
 <section id="contact_inner">
- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3635689.793072721!2d78.6421709625!3d27.141236999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1531201517392" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15228.927869324249!2d78.3720744!3d17.400652!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb95d259e6b49d%3A0x8b014ca66221474!2sOrdell%20interiors!5e0!3m2!1sen!2sin!4v1722844244425!5m2!1sen!2sin" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
 <section id="footer">
  <div class="container">
@@ -302,5 +243,53 @@
 </section>
 <script src="js/classie.js"></script> 
 <script src="js/cbpAnimatedHeader.js"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+const form = document.getElementById('contactForm');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const messageInput = document.getElementById('message');
+
+form.addEventListener('submit', function (event) {
+	let isValid = true;
+
+	if (!nameInput.value.trim()) {
+		isValid = false;
+		document.getElementById('nameError').style.display = 'block';
+	} else {
+		document.getElementById('nameError').style.display = 'none';
+	}
+
+	if (!emailInput.value.trim()) {
+		isValid = false;
+		document.getElementById('emailError').style.display = 'block';
+	} else {
+		document.getElementById('emailError').style.display = 'none';
+	}
+
+	if (!messageInput.value.trim()) {
+		isValid = false;
+		document.getElementById('messageError').style.display = 'block';
+	} else {
+		document.getElementById('messageError').style.display = 'none';
+	}
+
+	if (!isValid) {
+		event.preventDefault();
+	}
+});
+
+const inputs = [nameInput, emailInput, messageInput];
+
+inputs.forEach(input => {
+	input.addEventListener('input', function () {
+		if (input.value.trim()) {
+			document.getElementById(`${input.id}Error`).style.display = 'none';
+		}
+	});
+});
+});
+
+</script>
 </body>
 </html>

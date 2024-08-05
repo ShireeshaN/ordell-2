@@ -39,7 +39,7 @@ Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152
 #contact{ 
  padding-top: 30px;
  padding-bottom:40px;
- background-color: black;
+ background-color: white;
  }
 .contact_2 h4 {
  color: #fecb38;
@@ -91,13 +91,13 @@ Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152
  padding-bottom: 10px;
 }
 .contact_7 h2{
- color: #fff;
+ color: #000;
  font-weight: bold;
  padding-bottom: 20px;
 }
 #contact .form-control {
  font-size: 20px;
- background-color: #fecb38;
+ background-color: white;
  color: #000;
 }
 #contact .form-control::placeholder{
@@ -107,6 +107,7 @@ Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152
  padding-top: 25px;
  padding-bottom: 25px;
  margin-bottom: 10px;
+  
 }
 .contact_9 textarea {
  height: 155px;
@@ -173,4 +174,81 @@ Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152
 
 @media (min-width:1201px) and (max-width:1320px) {
 
+}
+
+
+.contact-section {
+    padding: 50px;
+   
+    max-width: 1000px;
+    margin: 50px auto;
+    border-radius: 10px;
+ 
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1f2b7b;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    position: relative;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #1f2b7b;
+}
+
+.error-message {
+    display: none;
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    bottom: -20px;
+    left: 10px;
+}
+
+button {
+    padding: 15px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width:150px;
+    padding-left: 4px;
+}
+
+button:hover {
+    background-color: #BD9867;
 }
