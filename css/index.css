@@ -128,21 +128,21 @@ padding-top:15px;
   background-repeat: no-repeat;
 }
 #center .fade-carousel .slides .slide-1 {
-background-image: url(../img/1.jpg);
+background-image: url(../img/slidesheroord/3.png);
 padding-bottom: 100px;
 padding-top:150px;
 background-repeat: no-repeat;
 background-size: cover;
 }
 #center .fade-carousel .slides .slide-2 {
-background-image: url(../img/2.jpg);
+background-image: url(../img/slidesheroord/1.png);
 padding-bottom: 100px;
 padding-top:150px;
 background-repeat: no-repeat;
 background-size: cover;
 }
 #center .fade-carousel .slides .slide-3 {
-background-image: url(../img/3.jpg);
+background-image: url(../img/slidesheroord/2.png);
 padding-bottom: 100px;
 padding-top:150px;
 background-repeat: no-repeat;
@@ -166,6 +166,17 @@ background-size: cover;
  padding-bottom:30px;
  background-color:#000;
 }
+.middles{
+  padding-top: 130px;
+  background-color: white;
+  color:#000;
+  text-align: center;
+  font-family: "Roboto";
+};
+.para1{
+  font-family: "Roboto";
+  padding-bottom: 100px;
+};
 .middle_2 h2{ 
  text-align:center;
  color:#fff;
@@ -752,4 +763,8 @@ margin-bottom:16px;
 
 @media (min-width:1201px) and (max-width:1320px) {
 
+}
+
+.logosizes{
+  height: 50px;
 }
