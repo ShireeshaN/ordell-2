@@ -228,7 +228,186 @@ document.getElementById('experience-count').setAttribute('data-target', '5');
  </script>
 
 
-<section id="middle">
+
+
+
+<section>
+	<div class="image-gallery">
+        <!-- Page 1 -->
+        <div class="image-row">
+            <img src="img/imagesgallary/6.png" alt="Image 1">
+            <img src="img/imagesgallary/5.png" alt="Image 2">
+            <img src="img/imagesgallary/4.png" alt="Image 3">
+        </div>
+        <div class="image-row">
+            <img src="img/imagesgallary/1.png" alt="Image 4">
+            <img src="img/imagesgallary/2.png" alt="Image 5">
+            <img src="img/imagesgallary/3.png" alt="Image 6">
+        </div>
+        <!-- Page 2 -->
+        <div class="image-row">
+            <img src="img/imagesgallary/6.png" alt="Image 1">
+            <img src="img/imagesgallary/5.png" alt="Image 2">
+            <img src="img/imagesgallary/4.png" alt="Image 3">
+        </div>
+        <div class="image-row">
+            <img src="img/imagesgallary/1.png" alt="Image 4">
+            <img src="img/imagesgallary/2.png" alt="Image 5">
+            <img src="img/imagesgallary/3.png" alt="Image 6">
+        </div>
+         <!-- Page 3 -->
+         <div class="image-row">
+            <img src="img/imagesgallary/6.png" alt="Image 1">
+            <img src="img/imagesgallary/5.png" alt="Image 2">
+            <img src="img/imagesgallary/4.png" alt="Image 3">
+        </div>
+        <div class="image-row">
+            <img src="img/imagesgallary/1.png" alt="Image 4">
+            <img src="img/imagesgallary/2.png" alt="Image 5">
+            <img src="img/imagesgallary/3.png" alt="Image 6">
+        </div>
+         <!-- Page 4 -->
+         <div class="image-row">
+            <img src="img/imagesgallary/6.png" alt="Image 1">
+            <img src="img/imagesgallary/5.png" alt="Image 2">
+            <img src="img/imagesgallary/4.png" alt="Image 3">
+        </div>
+        <div class="image-row">
+            <img src="img/imagesgallary/1.png" alt="Image 4">
+            <img src="img/imagesgallary/2.png" alt="Image 5">
+            <img src="img/imagesgallary/3.png" alt="Image 6">
+        </div>
+         <!-- Page 5 -->
+         <div class="image-row">
+            <img src="img/imagesgallary/6.png" alt="Image 1">
+            <img src="img/imagesgallary/5.png" alt="Image 2">
+            <img src="img/imagesgallary/4.png" alt="Image 3">
+        </div>
+        <div class="image-row">
+            <img src="img/imagesgallary/1.png" alt="Image 4">
+            <img src="img/imagesgallary/2.png" alt="Image 5">
+            <img src="img/imagesgallary/3.png" alt="Image 6">
+        </div>
+         <!-- Page 6 -->
+         <div class="image-row">
+            <img src="img/imagesgallary/6.png" alt="Image 1">
+            <img src="img/imagesgallary/5.png" alt="Image 2">
+            <img src="img/imagesgallary/4.png" alt="Image 3">
+        </div>
+        <div class="image-row">
+            <img src="img/imagesgallary/1.png" alt="Image 4">
+            <img src="img/imagesgallary/2.png" alt="Image 5">
+            <img src="img/imagesgallary/3.png" alt="Image 6">
+        </div>
+        <!-- Add more image rows for other pages as needed -->
+    </div>
+    <div class="pagination">
+        <span class="dot" onclick="showImages(1)"></span>
+        <span class="dot" onclick="showImages(2)"></span>
+        <span class="dot" onclick="showImages(3)"></span>
+        <span class="dot" onclick="showImages(4)"></span>
+        <span class="dot" onclick="showImages(5)"></span>
+        <span class="dot" onclick="showImages(6)"></span>
+        
+    </div>
+</section>
+
+
+<style>
+	.image-gallery {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.image-row {
+		display: none;
+		width: 100%;
+		justify-content: center;
+		animation: fadeIn 0.5s ease-in-out;
+	}
+
+	.image-row img {
+		width: 30%;
+		margin: 1%;
+		opacity: 0;
+		transform: scale(0.9);
+		animation: popUp 0.5s ease-in-out forwards;
+	}
+
+	.image-row img:hover {
+		transform: scale(1.05);
+		transition: transform 0.3s ease-in-out;
+	}
+
+	.pagination {
+		text-align: center;
+		margin-top: 20px;
+	}
+
+	.dot {
+		height: 15px;
+		width: 15px;
+		margin: 0 5px;
+		background-color: #bbb;
+		border-radius: 50%;
+		display: inline-block;
+		cursor: pointer;
+	}
+
+	.dot.active {
+		background-color: #717171;
+	}
+
+	@keyframes fadeIn {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+
+	@keyframes popUp {
+		from { opacity: 0; transform: scale(0.9); }
+		to { opacity: 1; transform: scale(1); }
+	}
+
+	@media (max-width: 768px) {
+		.image-row {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.image-row img {
+			width: 90%;
+			margin: 5% 0;
+		}
+	}
+</style>
+
+
+<script>
+	let currentPage = 1;
+
+	function showImages(page) {
+		currentPage = page;
+		const rows = document.querySelectorAll('.image-row');
+		rows.forEach((row, index) => {
+			row.style.display = 'none';
+			if (Math.ceil((index + 1) / 2) === page) {
+				row.style.display = 'flex';
+			}
+		});
+
+		const dots = document.querySelectorAll('.dot');
+		dots.forEach(dot => dot.classList.remove('active'));
+		dots[page - 1].classList.add('active');
+	}
+
+	// Initialize gallery
+	showImages(currentPage);
+</script>
+
+
+<!-- <section id="middle">
  <div class="container">
   <div class="row">
    <div class="middle_1 clearfix">
@@ -955,51 +1134,49 @@ document.getElementById('experience-count').setAttribute('data-target', '5');
    </div>
   </div>
  </div>
-</section>
+</section>-->
 <section id="footer">
  <div class="container">
   <div class="row">
    <div class="footer_main">
-    <div class="col-sm-2">
+    <div class="col-sm-3">
 	 <div class="footer_1">
-	  <h3>About</h3>
+	  <img class="footerlogosize" src="img/footer-logo.png"/>
+	  <br/>
+	  <br/>
+	  <br/>
 	  <ul>
-	      <li><a href="#">The Company</a></li>
-		  <li><a href="#">Our Values</a></li>
-		  <li><a href="#">Responsibility</a></li>
-		  <li><a href="#">Our Mission</a></li>
-		  <li><a href="#">Opportunity</a></li>
-		  <li><a href="#">Safety Concerns</a></li>
+	      <li><a class="fa fa-phone p-5" href="#">+91 9550715185</a></li>
+		  <li><a class="fa fa-phone p-5" href="#">+91 9949999129</a></li>
+		  
 	  </ul>
 	 </div>
 	</div>
-	<div class="col-sm-2">
+	<div class="col-sm-3">
 	 <div class="footer_1">
-	  <h3>Company</h3>
+	  <h3>Useful Links</h3>
 	  <ul>
-	      <li><a href="#">Netherlands</a></li>
-		  <li><a href="#">Nepal</a></li>
-		  <li><a href="#">Canada</a></li>
-		  <li><a href="#">France</a></li>
-		  <li><a href="#">Germany</a></li>
-		  <li><a href="#">United Kingdom</a></li>
+	      <li><a href="#">Home</a></li>
+		  <li><a href="#">About Us</a></li>
+		  <li><a href="#">Portfolio</a></li>
+		  <li><a href="#">Careers</a></li>
+		  <li><a href="#">Contact Us</a></li>
+		  
 	  </ul>
 	 </div>
 	</div>
-	<div class="col-sm-2">
+	<div class="col-sm-3">
 	 <div class="footer_1">
-	  <h3>Themes</h3>
+	  <h3>Portfolio</h3>
 	  <ul>
-	      <li><a href="#">Rural</a></li>
-		  <li><a href="#">Snow &amp; Ice</a></li>
-		  <li><a href="#">Wildlife Safari</a></li>
-		  <li><a href="#">Hunting Trip</a></li>
-		  <li><a href="#">Desert</a></li>
-		  <li><a href="#">Mountain</a></li>
+	      <li><a href="#">3D Renders</a></li>
+		 
+		  <li><a href="#">Gallery</a></li>
+		 
 	  </ul>
 	 </div>
 	</div>
-	<div class="col-sm-2">
+	<!-- <div class="col-sm-3">
 	 <div class="footer_1">
 	  <h3>Booking</h3>
 	  <ul>
@@ -1011,8 +1188,8 @@ document.getElementById('experience-count').setAttribute('data-target', '5');
 		  <li><a href="#">Order a Brochure</a></li>
 	  </ul>
 	 </div>
-	</div>
-	<div class="col-sm-2">
+	</div> -->
+	<!-- <div class="col-sm-2">
 	 <div class="footer_1">
 	  <h3>Entrada</h3>
 	  <ul>
@@ -1023,17 +1200,19 @@ document.getElementById('experience-count').setAttribute('data-target', '5');
 		  <li><a href="#">Personalised Service</a></li>
 	  </ul>
 	 </div>
-	</div>
-	<div class="col-sm-2">
+	</div> -->
+	 <div class="col-sm-3">
 	 <div class="footer_2">
-	  <h3>Entrada</h3>
+	  <h3>Address</h3>
 	  <ul>
-	      <li><i class="fa fa-phone"></i>(020) 72077878</li>
-		  <li><i class="fa fa-envelope"></i><a href="#">INFO@GMAIL.COM</a></li>
-		  <li><i class="fa fa-map-marker"></i>1234 VESTIBULUM</li>
+	      <li><i class="fa fa-map-marker"></i>Lakshmi Narasimhaswamy Nagar, Puppalguda road,Manikonda, Hyderabad, Telangana - 500089</li>
+		  <li><i class="fa fa-envelope"></i><a href="#"> Ordellinteriors@gmail.com</a></li>
+		
 	  </ul>
 	 </div>
-	</div>
+	</div> 
+
+
    </div>
   </div>
  </div>
@@ -1044,7 +1223,7 @@ document.getElementById('experience-count').setAttribute('data-target', '5');
    <div class="footer_main_1 clearfix">
     <div class="col-sm-8">
 	 <div class="footer_main_2">
-	  <p>© 2013 Your Website Name. All Rights Reserved. Design by<a href="http://www.TemplateOnWeb.com"> Template On Web</a></p>
+	  <p class="reserved">© 2024 Ordell Interiors. All Rights Reserved. Design by<a href="https://thepatternscompany.com/"> The Patterns Company</a></p>
 	 </div>
 	</div>
 	<div class="col-sm-4">
@@ -1061,7 +1240,12 @@ document.getElementById('experience-count').setAttribute('data-target', '5');
    </div>
   </div>
  </div>
-</section>
+</section> 
+
+
+
+
+
 <script src="js/classie.js"></script> 
 <script src="js/cbpAnimatedHeader.js"></script>
 </body>
