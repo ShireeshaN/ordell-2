@@ -8,7 +8,7 @@ Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152
 
 /********************* contact_main ****************/
 #contact_main{ 
- background-image: url(../img/73.jpg);
+ background-image: url(../img/allbannersimg/3.png);
  padding-bottom: 180px;
  padding-top: 180px;
  background-repeat: no-repeat;
@@ -179,11 +179,9 @@ Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152
 
 .contact-section {
     padding: 50px;
-   
     max-width: 1000px;
     margin: 50px auto;
     border-radius: 10px;
- 
 }
 
 .contact-section h2 {
@@ -199,6 +197,7 @@ form {
 
 .form-row {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -245,10 +244,26 @@ button {
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s;
-    width:150px;
+    width: 150px;
     padding-left: 4px;
 }
 
 button:hover {
     background-color: #BD9867;
+}
+
+/* Media Queries for Mobile View */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-group {
+        margin: 10px 0;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+    }
 }
