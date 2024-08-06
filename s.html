@@ -3,113 +3,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar with Auto-Close on Outside Click</title>
+    <title>Gallery with Pagination and Popup</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <style>
-        /* Add your custom styles here */
-        .well_1 {
-            display: inline-block;
-            margin: 0 5px;
+        .gallery-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .gallery-item {
+            position: relative;
+            width: calc(33.33% - 20px);
+            margin: 10px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fly-in 0.6s ease-in-out;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        @keyframes fly-in {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .popup-content {
+            position: relative;
+            max-width: 80%;
+            max-height: 80%;
+        }
+        .popup-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .popup .close, .popup .prev, .popup .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 2em;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        .popup .close {
+            top: 20px;
+            right: 20px;
+            transform: translateY(0);
+        }
+        .popup .prev {
+            left: 10px;
+        }
+        .popup .next {
+            right: 10px;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .pagination a {
+            color: #333;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            margin: 0 2px;
+        }
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+        @media (max-width: 768px) {
+            .gallery-item {
+                width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 576px) {
+            .gallery-item {
+                width: calc(100% - 20px);
+            }
         }
     </style>
 </head>
 <body>
-<section id="header" class="clearfix">
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html"> <i class="fa fa-home"></i> Interior</a>
+    <div class="container gallery-container">
+        <div class="gallery">
+            <!-- Gallery items will be dynamically inserted here -->
+            <div class="gallery-item">
+                <img src="img/ordell-images/13.png" alt="Gallery Image 1">
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="services.html">SERVICES</a></li>
-                    <li class="active"><a href="blog.html">BLOG</a></li>
-                    <li><a href="details.html">DETAILS</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <li class="dropdown dropdown-large">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">DROPDOWN <b class="caret"></b></a>
-                        <ul class="dropdown-menu dropdown-menu-large row">
-                            <li class="col-sm-2">
-                                <div class="header_1">
-                                    <h2><a href="#"><img src="img/4.jpg" class="img_responsive"></a></h2>
-                                    <p><a href="#">Sed Dignissim Lacinia</br> Vestibulum Lacinia</a></p>
-                                </div>
-                            </li>
-                            <li class="col-sm-2">
-                                <div class="header_1">
-                                    <h2><a href="#"><img src="img/5.jpg" class="img_responsive"></a></h2>
-                                    <p><a href="#">Sed Dignissim Lacinia</br> Vestibulum Lacinia</a></p>
-                                </div>
-                            </li>
-                            <li class="col-sm-2">
-                                <div class="header_1">
-                                    <h2><a href="#"><img src="img/6.jpg" class="img_responsive"></a></h2>
-                                    <p><a href="#">Sed Dignissim Lacinia</br> Vestibulum Lacinia</a></p>
-                                </div>
-                            </li>
-                            <li class="col-sm-2">
-                                <div class="header_1">
-                                    <h2><a href="#"><img src="img/7.jpg" class="img_responsive"></a></h2>
-                                    <p><a href="#">Sed Dignissim Lacinia</br> Vestibulum Lacinia</a></p>
-                                </div>
-                            </li>
-                            <li class="col-sm-2">
-                                <div class="header_1">
-                                    <h2><a href="#"><img src="img/8.jpg" class="img_responsive"></a></h2>
-                                    <p><a href="#">Sed Dignissim Lacinia</br> Vestibulum Lacinia</a></p>
-                                </div>
-                            </li>
-                            <li class="col-sm-2">
-                                <div class="header_1">
-                                    <h2><a href="#"><img src="img/9.jpg" class="img_responsive"></a></h2>
-                                    <p><a href="#">Sed Dignissim Lacinia</br> Vestibulum Lacinia</a></p>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="well_1 clearfix"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li class="well_1 clearfix"><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    <li class="well_1 clearfix"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
-</section>
-
-<section id="blog_main">
-    <div class="container">
-        <div class="row">
-            <div class="about_1">
-                <h2>BLOG</h2>
-                <p><a href="details.html"> HOME </a> <i class="fa fa-angle-double-right"></i> <a href="details.html"> BLOG </a></p>
+            <div class="gallery-item">
+                <img src="img/ordell-images/13.png" alt="Gallery Image 2">
+            </div>
+            <div class="gallery-item">
+                <img src="img/ordell-images/13.png" alt="Gallery Image 3">
+            </div>
+            <div class="gallery-item">
+                <img src="img/ordell-images/13.png" alt="Gallery Image 4">
+            </div>
+            <div class="gallery-item">
+                <img src="img/ordell-images/13.png" alt="Gallery Image 5">
+            </div>
+            <div class="gallery-item">
+                <img src="img/ordell-images/13.png" alt="Gallery Image 6">
+            </div>
+            <div class="gallery-item">
+                <img src="img/ordell-images/13.png" alt="Gallery Image 1">
+            </div>
+            <div class="gallery-item">
+                <img src="img/ordell-images/13.png" alt="Gallery Image 2">
+            </div>
+            <div class="gallery-item">
+                <img src="img/ordell-images/13.png" alt="Gallery Image 3">
+            </div>
+            <div class="gallery-item">
+                <img src="img/ordell-images/13.png" alt="Gallery Image 4">
+            </div>
+            <div class="gallery-item">
+                <img src="img/ordell-images/13.png" alt="Gallery Image 5">
+            </div>
+            <div class="gallery-item">
+                <img src="img/ordell-images/13.png" alt="Gallery Image 6">
             </div>
         </div>
+        <div class="pagination">
+            <a href="#" class="prev-page">&laquo;</a>
+            <a href="#" class="page-num active">1</a>
+            <a href="#" class="page-num">2</a>
+            <a href="#" class="page-num">3</a>
+            <a href="#" class="page-num">4</a>
+            <a href="#" class="page-num">5</a>
+            <a href="#" class="next-page">&raquo;</a>
+        </div>
     </div>
-</section>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $(document).click(function (event) {
-            var clickover = $(event.target);
-            var _opened = $(".navbar-collapse").hasClass("in");
-            if (_opened === true && !clickover.hasClass("navbar-toggle")) {
-                $(".navbar-toggle").click();
+    <div class="popup">
+        <span class="close">&times;</span>
+        <span class="prev">&#10094;</span>
+        <span class="next">&#10095;</span>
+        <div class="popup-content">
+            <img src="" alt="Popup Image">
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            let currentIndex = 0;
+            const galleryItems = $('.gallery-item img');
+            const popup = $('.popup');
+            const popupImage = $('.popup-content img');
+            const itemsPerPage = 6;
+            const paginationLinks = $('.pagination a.page-num');
+
+            function showPopup(index) {
+                const imgSrc = $(galleryItems[index]).attr('src');
+                popupImage.attr('src', imgSrc);
+                popup.fadeIn();
+                currentIndex = index;
             }
+
+            function closePopup() {
+                popup.fadeOut();
+            }
+
+            function showNext() {
+                currentIndex = (currentIndex + 1) % galleryItems.length;
+                showPopup(currentIndex);
+            }
+
+            function showPrev() {
+                currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+                showPopup(currentIndex);
+            }
+
+            function paginateGallery(pageIndex) {
+                galleryItems.parent().hide();
+                galleryItems.slice(pageIndex * itemsPerPage, (pageIndex + 1) * itemsPerPage).parent().show();
+                paginationLinks.removeClass('active');
+                paginationLinks.eq(pageIndex).addClass('active');
+            }
+
+            galleryItems.on('click', function() {
+                const index = galleryItems.index(this);
+                showPopup(index);
+            });
+
+            $('.close').on('click', closePopup);
+            $('.next').on('click', showNext);
+            $('.prev').on('click', showPrev);
+            popup.on('click', function(e) {
+                if (!$(e.target).is('.popup-content img, .next, .prev')) {
+                    closePopup();
+                }
+            });
+
+            paginationLinks.on('click', function(e) {
+                e.preventDefault();
+                const pageIndex = $(this).index() - 1;
+                paginateGallery(pageIndex);
+            });
+
+            $('.prev-page').on('click', function(e) {
+                e.preventDefault();
+                const activePage = $('.pagination a.page-num.active').index() - 1;
+                if (activePage > 0) {
+                    paginateGallery(activePage - 1);
+                }
+            });
+
+            $('.next-page').on('click', function(e) {
+                e.preventDefault();
+                const activePage = $('.pagination a.page-num.active').index() - 1;
+                if (activePage < paginationLinks.length - 1) {
+                    paginateGallery(activePage + 1);
+                }
+            });
+
+            paginateGallery(0);
         });
-    });
-</script>
+    </script>
 </body>
 </html>

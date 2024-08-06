@@ -832,3 +832,8 @@ h4 a {
   /*carousel curve*/
 
 
+  .bdr{
+    border-radius: 25px;
+  }
+
+
