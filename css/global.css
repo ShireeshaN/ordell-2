@@ -295,7 +295,7 @@ color:#fecb38;
  max-height: none;
 }
 #header .navbar-fixed-top, .navbar-fixed-bottom {
- position: static;
+ position: fixed;
 }
 .header_1 p{ 
  padding-top:20px;
@@ -417,6 +417,12 @@ color:#fecb38;
 	
 .logosizes{
 	height: 45px;
+  }
+
+  @media (max-width:992px){
+    .logosizes{
+      padding-left: 20px;
+      }
   }
 
 
