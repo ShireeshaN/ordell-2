@@ -413,91 +413,22 @@ color:#fecb38;
 
 
 
-	/* Basic styles for navigation */
-	nav ul {
-		list-style-type: none;
-		padding: 0;
-		margin: 0;
-		display: flex;
-	}
-
-	nav li {
-		position: relative;
-	}
-
-	nav a {
-		text-decoration: none;
-		display: block;
-		padding: 10px 20px;
-	}
-
-	/* Dropdown menu styles */
-	.dropdown {
-		display: none;
-		position: absolute;
-		top: 100%;
-		left: 0;
-		background-color: white;
-		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-		z-index: 1;
-	}
-
-	.dropdown a {
-		padding: 10px 20px;
-	}
-
-	.dropdown li {
-		display: block;
-	}
-
-	/* Show dropdown menu on hover for large screens */
-	nav li:hover .dropdown {
-		display: block;
-	}
-
-	/* Mobile menu toggle button */
-	.menu-toggle {
-		display: none;
-		cursor: pointer;
-	}
-
-	.menu-toggle span {
-		display: block;
-		width: 25px;
-		height: 3px;
-		margin: 5px;
-		background-color: black;
-	}
-
-	/* Responsive styles */
-	@media (max-width: 768px) {
-		nav ul {
-			flex-direction: column;
-			display: none;
-		}
-
-		nav ul.show {
-			display: flex;
-		}
-
-		.menu-toggle {
-			display: block;
-		}
-
-		nav li {
-			width: 100%;
-		}
-
-		.dropdown {
-			position: relative;
-		}
-
-		.dropdown.show {
-			display: block;
-		}
-	}
-
+	
 	
 .logosizes{
 	height: 45px;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

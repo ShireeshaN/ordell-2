@@ -9,6 +9,7 @@
     <link href="css/global.css" rel="stylesheet">
 	<link href="css/about.css" rel="stylesheet">
 	<link href="css/element.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
 	<link rel="stylesheet" type="text/css" href="img/logoord.png" />
 	<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
    <script src="js/jquery-2.1.1.min.js"></script>
@@ -33,23 +34,30 @@
 	</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				 <ul class="nav navbar-nav navbar-right">
+				<ul class="nav navbar-nav navbar-right">
 					<li class=""><a href="index.html">HOME</a></li>
 					<li><a class="active" href="about.html">ABOUT</a></li>
-					<li>
-						<a href="#">PORTFOLIO</a>
-						<ul class="dropdown">
+					
+					<!-- Portfolio Dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+							PORTFOLIO <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" role="menu">
+							
 							<li><a href="3drenders.html">3D RENDRES</a></li>
 							<li><a href="gallery.html">GALLERY</a></li>
 						</ul>
 					</li>
+			
 					<li><a href="careers.html">CAREERS</a></li>
 					
 					<li><a href="contact.html">CONTACT</a></li>
-		        	
+					
 					<li class="well_1 clearfix"><a href="#"><i class="fa fa-facebook"></i></a></li>
 					<li class="well_1 clearfix"><a href="#"><i class="fa fa-instagram"></i></a></li>
 					<li class="well_1 clearfix"><a href="#"><i class="fa fa-twitter"></i></a></li>
+				</ul>
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
 	</nav>
@@ -182,5 +190,6 @@
    
 <script src="js/classie.js"></script> 
 <script src="js/cbpAnimatedHeader.js"></script>
+
 </body>
 </html>
