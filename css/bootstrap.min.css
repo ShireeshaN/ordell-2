@@ -3823,7 +3823,7 @@ input[type=button].btn-block {
     margin: 2px 0 0;
     list-style: none;
     font-size: 14px;
-    background-color: #fff;
+    background-color: #000;
     border: 1px solid #ccc;
     border: 1px solid rgba(0, 0, 0, .15);
     border-radius: 4px;
@@ -3864,16 +3864,16 @@ input[type=button].btn-block {
 .dropdown-menu>.active>a,
 .dropdown-menu>.active>a:hover,
 .dropdown-menu>.active>a:focus {
-    color: #fff;
+    color: #000;
     text-decoration: none;
     outline: 0;
-    background-color: #428bca
+    background-color: #BD9867
 }
 
 .dropdown-menu>.disabled>a,
 .dropdown-menu>.disabled>a:hover,
 .dropdown-menu>.disabled>a:focus {
-    color: #999
+    color: #000
 }
 
 .dropdown-menu>.disabled>a:hover,

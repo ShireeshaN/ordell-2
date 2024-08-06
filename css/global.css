@@ -132,7 +132,7 @@ border:none;
 }
 #header .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
 background:none;
-color: #fff;
+color: #000;
 }
 .header_1 p a{ 
 text-decoration:none;
