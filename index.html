@@ -68,7 +68,7 @@
 	 <div class="row">
 	  <div class="middle_1 clearfix">
 	   <div class="middle_2">
-		<h2>ORDELL INTERIORS</h2>
+		<h2 class="textss">ORDELL INTERIORS</h2>
 		<p class="para1">Crafting Timeless Trends</p>
 	</div>
 </div>
@@ -78,71 +78,70 @@
 
 
 
-<section class="containers" id="center">
+<section class="containers mb-5" id="center">
 	<div class="center">
 	  <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
 		<div class="overlay"></div>
 		<ol class="carousel-indicators">
-		  <li data-target="#bs-carousel" data-slide-to="0" class=""></li>
-		  <li data-target="#bs-carousel" data-slide-to="1" class=""></li>
-		  <li data-target="#bs-carousel" data-slide-to="2" class="active"></li>
+		  <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+		  <li data-target="#bs-carousel" data-slide-to="1"></li>
+		  <li data-target="#bs-carousel" data-slide-to="2"></li>
+		  <li data-target="#bs-carousel" data-slide-to="3"></li>
 		</ol>
 		<div class="carousel-inner curveslide">
-		  <div class="item slides">
-			<div class="slide-1"></div>
-			<div class="hero">
-			  <hgroup>
-				<h1>Crafting your dream space</h1>
-				
-				
-				<h4><a href="contact.html">Book Appointment</a></h4>
-			  </hgroup>
-			</div>
-		  </div>
-		  <div class="item slides">
-			<div class="slide-2"></div>
-			<div class="hero">
-			  <hgroup>
-				<h1>Transforming spaces, elevating lifestyles</h1>
-				
-				<h4><a href="contact.html">Book Appointment</a></h4>
-			  </hgroup>
-			</div>
-		  </div>
 		  <div class="item slides active">
-			<div class="slide-3"></div>
-			<div class="hero">
-			  <hgroup>
-				<h1>Your vision, our craft</h1>
-			
-				<h4><a href="contact.html">Book Appointment</a></h4>
-			  </hgroup>
-			</div>
+			<video class="video-fluid" autoplay muted loop>
+			  <source src="media/IMG_9953 (1).mp4" type="video/mp4">
+			  Your browser does not support the video tag.
+			</video>
+		  </div>
+		  <div class="item slides">
+			<video class="video-fluid" autoplay muted loop>
+			  <source src="media/IMG_9954 (1).mp4" type="video/mp4">
+			  Your browser does not support the video tag.
+			</video>
+		  </div>
+		  <div class="item slides">
+			<video class="video-fluid" autoplay muted loop>
+			  <source src="media/IMG_9955 (1).mp4" type="video/mp4">
+			  Your browser does not support the video tag.
+			</video>
+		  </div>
+		  <div class="item slides">
+			<video class="video-fluid" autoplay muted loop>
+			  <source src="media/IMG_9956 (1).mp4" type="video/mp4">
+			  Your browser does not support the video tag.
+			</video>
 		  </div>
 		</div>
 	  </div>
 	</div>
   </section>
   
-  <section class="stats-section ">
+  
+  
+  
+  
+  <section class="stats-section  mt-3">
     <div class="stat">
-      <span class="count" id="projects-count">0</span>+ Projects
+      <span class="count" id="projects-count">0</span><spam class="plussize">+</spam> <br/>Projects
     </div>
     <div class="stat">
-      <span class="count" id="team-count">0</span>+ Team
+      <span class="count" id="team-count">0</span><spam class="plussize">+</spam>  <br/>Team
     </div>
     <div class="stat">
-      <span class="count" id="experience-count">5</span>+ Experience
+      <span class="count" id="experience-count">5</span><spam class="plussize">+</spam>  <br/>Experience
     </div>
   </section>
 
   <style>
 	.stats-section {
   display: flex;
+  color:black;
   justify-content: space-around;
   align-items: center;
   padding: 20px;
-  background-color:gray;
+  background-color:white;
   margin-top: 30px;
   margin-bottom: 30px;
   margin-left: 50px;
@@ -157,20 +156,36 @@
 .count {
   font-weight: bold;
   font-size: 2em;
-  color:white;
+  color:black;
+  padding-right:10px;
+}
+.plussize{
+	font-size: 50px;
 }
 
 @media (max-width: 768px) {
   .stats-section {
-    flex-direction: column;
+    flex-direction: row; /* Ensure items are laid out in a row */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
     text-align: center;
-    padding: 40px 20px;
+    padding: 20px; /* Adjust padding for mobile view */
+	padding-top: 0px;
   }
 
   .stat {
-    margin-bottom: 20px;
+    flex: 1; /* Allow each stat to take up equal space */
+    margin: 10px; /* Adjust margins for spacing between stats */
+    font-size: 1.2em; /* Decrease font size for better fit */
   }
+
+  .count {
+    font-size: 2em; /* Adjust font size for the count */
+  }
+  .plussize{
+	font-size: 20px;
 }
+}
+
   </style>
  <script>
 	document.addEventListener('DOMContentLoaded', () => {
@@ -1226,84 +1241,69 @@ document.getElementById('experience-count').setAttribute('data-target', '5');
  <div class="container">
   <div class="row">
    <div class="footer_main">
-    <div class="col-sm-3">
+
+    <div class="col-sm-6">
 	 <div class="footer_1">
-	  <img class="footerlogosize" src="img/footer-logo.png"/>
-	  <br/>
-	  <br/>
-	  <br/>
+	  <!-- <img class="footerlogosize" src="img/footer-logo.png"/> -->
+	  <p class="textfooter">EXPERIENCE THE GRANDEUR  OF THE ORDELL LIFESTYLE TODAY </p>
 	  <ul>
-	      <li><a class="fa fa-phone p-5" href="#">+91 9550715185</a></li>
-		  <li><a class="fa fa-phone p-5" href="#">+91 9949999129</a></li>
-		  
-	  </ul>
-	 </div>
-	</div>
-	<div class="col-sm-3">
-	 <div class="footer_1">
-	  <h3>Useful Links</h3>
-	  <ul>
-	      <li><a href="index.html">Home</a></li>
-		  <li><a href="about.html">About Us</a></li>
-		  <li><a href="3drenders.html">Portfolio</a></li>
-		  <li><a href="careers.html">Careers</a></li>
-		  <li><a href="contact.html">Contact Us</a></li>
-		  
-	  </ul>
-	 </div>
-	</div>
-	<div class="col-sm-3">
-	 <div class="footer_1">
-	  <h3>Portfolio</h3>
-	  <ul>
-	      <li><a href="3drenders.html">3D Renders</a></li>
-		 
-		  <li><a href="gallery.html">Gallery</a></li>
-		 
-	  </ul>
+		<li><i class="fa fa-map-marker iconss"></i><a href="#"> <spam class="icoo">Manikonda, Hyderabad, Telangana - 500089</spam></a></li>
+		<li><i class="fa fa-envelope iconss"></i><a href="#"> <spam class="icoo">Ordellinteriors@gmail.com</spam></a></li>
+	</ul>
+	 
+	  
 	 </div>
 	</div>
 	
-	 <div class="col-sm-3">
-	 <div class="footer_2">
-	  <h3>Address</h3>
-	  <ul>
-	      <li><i class="fa fa-map-marker"></i>Lakshmi Narasimhaswamy Nagar, Puppalguda road,Manikonda, Hyderabad, Telangana - 500089</li>
-		  <li><i class="fa fa-envelope"></i><a href="#"> Ordellinteriors@gmail.com</a></li>
+	
+	
+	<div class="col-sm-6">
 		
-	  </ul>
-	 </div>
-	</div> 
+	<div class="footer_main_3">
+		<ul>
+			<li><a class="fa fa-phone " href="#"><spam class="textfooter">+91 9550715185</spam></a></li>
+			<li><a class="fa fa-phone" href="#"><spam class="textfooter">+91 9949999129</spam></a></li>
+		  </ul>
+		<ul>
+			 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+			 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			 <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+			 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+			 <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+		</ul>
+	   </div>
+	</div>
+
 
 
    </div>
   </div>
  </div>
 </section>
+
+
+
+
 <section id="footer_main">
- <div class="container">
-  <div class="row">
-   <div class="footer_main_1 clearfix">
-    <div class="col-sm-8">
-	 <div class="footer_main_2">
-	  <p class="reserved">© 2024 Ordell Interiors. All Rights Reserved. Design by<a href="https://thepatternscompany.com/"> The Patterns Company</a></p>
-	 </div>
+	<div class="container">
+	  <div class="row justify-content-center align-items-center">
+		<div class="footer_main_1 clearfix text-center">
+		  <div class="col-sm-8">
+			<div class="footer_main_2">
+			  <p class="reserved">
+				© 2024 Ordell Interiors. All Rights Reserved. Design by
+				<a href="https://thepatternscompany.com/"> The Patterns Company</a>
+			  </p>
+			</div>
+		  </div>
+		  <div class="col-sm-4">
+			<!-- You can add more content here if needed -->
+		  </div>
+		</div>
+	  </div>
 	</div>
-	<div class="col-sm-4">
-	 <div class="footer_main_3">
-	  <ul>
-	       <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-		   <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-		   <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-		   <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-		   <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-	  </ul>
-	 </div>
-	</div>
-   </div>
-  </div>
- </div>
-</section> 
+  </section>
+  
 
 
 
