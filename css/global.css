@@ -19,6 +19,21 @@ p {
 color: rgb(37, 37, 37);
 font-size: 19px;
 }
+.textfooter{
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.textfooter1{
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 50;
+}
+.ppp{
+  padding-right: 2px;
+}
 h1,h2,h3,h4,h5,h6{
 padding:0px;
 margin:0px;
@@ -209,7 +224,7 @@ color:#fecb38;
 #footer{ 
  padding-top:30px;
  padding-bottom:30px;
- background:#BD9867;
+ background:black;
  }
 .footer_1 h3{ 
  color: black;
@@ -425,13 +440,39 @@ color:#fecb38;
       }
   }
 
+  h1,h2,h3,h4,h5,h6 {
+    font-family: Chub Gothic,sans-serif;
+    font-weight: 500;
+    color: #000;
+    margin: 0
+}
+
+.para1{
+  font-family:Chub Gothic,sans-serif;
+  padding-bottom: 100px;
+  font-size: 14px
+};
+
+.textfooter{
+  color:white;
+
+  font-family:Chub Gothic,sans-serif;
+  color: #deaf26;
+}
 
 
 
+.iconss{
+  color: white;
+  font-size: 10px;
+    font-family:Chub Gothic,sans-serif;
+}
 
-
-
-
+.icoo{
+  color: white;
+  font-size: 14px;
+  font-family:Chub Gothic,sans-serif;
+}
 
 
 
