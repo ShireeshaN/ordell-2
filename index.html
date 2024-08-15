@@ -156,6 +156,7 @@
   margin-bottom: 30px;
   margin-left: 50px;
   margin-right: 50px;
+  font-weight: bold;
 }
 
 .stat {
@@ -167,7 +168,7 @@
   font-weight: bold;
   font-size: 2em;
   color:black;
-  padding-right:10px;
+ 
 }
 .plussize{
 	font-size: 50px;
@@ -1247,49 +1248,93 @@ document.getElementById('experience-count').setAttribute('data-target', '5');
   </div>
  </div>
 </section>-->
+
+
+
 <section id="footer">
- <div class="container">
-  <div class="row">
-   <div class="footer_main">
-
-    <div class="col-sm-6">
-	 <div class="footer_1">
-	  <!-- <img class="footerlogosize" src="img/footer-logo.png"/> -->
-	  <p class="textfooter">EXPERIENCE THE GRANDEUR  OF THE ORDELL LIFESTYLE TODAY </p>
-	  <ul>
-		<li><i class="fa fa-map-marker iconss"></i><a href="#"> <spam class="icoo">Manikonda, Hyderabad, Telangana - 500089</spam></a></li>
-		<li><i class="fa fa-envelope iconss"></i><a href="#"> <spam class="icoo">Ordellinteriors@gmail.com</spam></a></li>
-	</ul>
-	 
-	  
-	 </div>
+	<div class="container">
+	  <div class="row">
+		<div class="footer_main">
+  
+		  <div class="col-sm-6">
+			<div class="footer_1">
+			  <!-- <img class="footerlogosize" src="img/footer-logo.png"/> -->
+			  <p class="textfooter">EXPERIENCE THE GRANDEUR OF THE ORDELL LIFESTYLE TODAY</p>
+			  <ul>
+				<li><i class="fa fa-map-marker iconss"></i><a href="#"> <span class="icoo">Manikonda, Hyderabad, Telangana - 500089</span></a></li>
+				<li><i class="fa fa-envelope iconss"></i><a href="#"> <span class="icoo">Ordellinteriors@gmail.com</span></a></li>
+			  </ul>
+			</div>
+		  </div>
+  
+		  <div class="col-sm-6">
+			<div class="footer_main_3">
+			  <ul class="phone-list">
+				<li><a class="fa fa-phone" href="#"><span class="textfooter">+91 9550715185</span></a></li>
+				<li><a class="fa fa-phone" href="#"><span class="textfooter">+91 9949999129</span></a></li>
+			  </ul>
+			  <ul class="social-list">
+				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+				<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+				<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+			  </ul>
+			</div>
+		  </div>
+  
+		  <!-- Add the new div for fading images -->
+		  <div class="fade-images">
+			<img src="img/image1.jpg" alt="Image 1">
+			<img src="img/image2.jpg" alt="Image 2">
+			<img src="img/image3.jpg" alt="Image 3">
+		  </div>
+  
+		</div>
+	  </div>
 	</div>
-	
-	
-	
-	<div class="col-sm-6">
-		
-	<div class="footer_main_3">
-		<ul>
-			<li><a class="fa fa-phone " href="#"><spam class="textfooter">+91 9550715185</spam></a></li>
-			<li><a class="fa fa-phone" href="#"><spam class="textfooter">+91 9949999129</spam></a></li>
-		  </ul>
-		<ul>
-			 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-			 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-			 <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-			 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-			 <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-		</ul>
-	   </div>
-	</div>
+  </section>
+  <style>
+	#footer {
+  position: relative;
+}
 
+.fade-images {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Adjust the height as needed */
+  overflow: hidden; /* Hides overflow images */
+  margin-top: 20px; /* Spacing above the image slider */
+}
 
+.fade-images img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  animation: fade 10s infinite; /* Fade animation */
+}
 
-   </div>
-  </div>
- </div>
-</section>
+@keyframes fade {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  33% { opacity: 1; }
+  53% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.fade-images img:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.fade-images img:nth-child(2) {
+  animation-delay: 3.33s; /* Adjust based on the duration of the fade */
+}
+
+.fade-images img:nth-child(3) {
+  animation-delay: 6.66s; /* Adjust based on the duration of the fade */
+}
+
+  </style>
 
 
 
