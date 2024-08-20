@@ -81,7 +81,7 @@
 		<h2 class="textss">ORDELL INTERIORS</h2>
 		<p class="para1">Crafting Timeless Trends</p>
 		
-		<ul class="social-list">
+		<ul class="social-lists">
 			<li><a href="#"><i class="fa fa-facebook pkk"></i></a></li>
 			<li><a href="#"><i class="fa fa-twitter pkk"></i></a></li>
 			<li><a href="#"><i class="fa fa-instagram pkk"></i></a></li>
@@ -94,7 +94,7 @@
 </div>
 </section>
 <style>
-	.social-list {
+	.social-lists {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -103,20 +103,20 @@
   padding-bottom: 10px;
 }
 
-.social-list li {
+.social-lists li {
   margin: 0 10px; /* Adjusts spacing between icons */
 }
 
-.social-list a {
+.social-lists a {
   text-decoration: none;
 }
 
-.social-list i {
+.social-lists i {
   font-size: 20px; /* Adjusts the size of the icons */
   color: #b96f00; /* Icon color */
 }
 
-.social-list i:hover {
+.social-lists i:hover {
   color: #b96f00; /* Change color on hover */
 }
 </style>
@@ -168,24 +168,24 @@
   
   <section class="stats-section  mt-3">
     <div class="stat">
-      <span class="count" id="projects-count">0</span><spam class="plussize">+</spam> <br/>Projects
+        <span class="count" id="projects-count">0</span><span class="plussize">+</span> <br/>Projects
     </div>
     <div class="stat">
-      <span class="count" id="team-count">0</span><spam class="plussize">+</spam>  <br/>Team
+        <span class="count" id="team-count">0</span><span class="plussize">+</span>  <br/>Team
     </div>
     <div class="stat">
-      <span class="count" id="experience-count">5</span><spam class="plussize">+</spam>  <br/>Experience
+        <span class="count" id="experience-count">5</span><span class="plussize">+</span>  <br/>Experience
     </div>
-  </section>
+</section>
 
-  <style>
-	.stats-section {
+<style>
+.stats-section {
   display: flex;
-  color:black;
+  color: black;
   justify-content: space-around;
   align-items: center;
   padding: 20px;
-  background-color:white;
+  background-color: white;
   margin-top: 30px;
   margin-bottom: 30px;
   margin-left: 50px;
@@ -196,16 +196,29 @@
 .stat {
   font-size: 1.5em;
   text-align: center;
+  overflow: hidden; /* Ensure the animated count stays within the container */
 }
 
 .count {
   font-weight: bold;
   font-size: 2em;
-  color:black;
- 
+  color: black;
+  display: inline-block;
+  transform: translateY(100%); /* Start below the visible area */
+  animation: countUp 1s ease-out forwards; /* Animate upwards */
 }
-.plussize{
-	font-size: 50px;
+
+.plussize {
+  font-size: 50px;
+}
+
+@keyframes countUp {
+  from {
+    transform: translateY(100%); /* Start from below */
+  }
+  to {
+    transform: translateY(0); /* End at the original position */
+  }
 }
 
 @media (max-width: 768px) {
@@ -214,7 +227,7 @@
     flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
     text-align: center;
     padding: 20px; /* Adjust padding for mobile view */
-	padding-top: 0px;
+    padding-top: 0px;
   }
 
   .stat {
@@ -226,14 +239,15 @@
   .count {
     font-size: 2em; /* Adjust font size for the count */
   }
-  .plussize{
-	font-size: 20px;
-}
-}
 
-  </style>
- <script>
-	document.addEventListener('DOMContentLoaded', () => {
+  .plussize {
+    font-size: 20px;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
   const counters = document.querySelectorAll('.count');
 
   counters.forEach(counter => {
@@ -259,8 +273,8 @@
 document.getElementById('projects-count').setAttribute('data-target', '60');
 document.getElementById('team-count').setAttribute('data-target', '50');
 document.getElementById('experience-count').setAttribute('data-target', '5');
+</script>
 
- </script>
 
 <div class="container gallery-container">
 	<div class="gallery">
@@ -338,6 +352,9 @@ document.getElementById('experience-count').setAttribute('data-target', '5');
 			<img src="img/ordell-images/3.png" alt="Gallery Image 6">
 		</div>
 	</div>
+
+
+	
 	<div class="pagination">
 		<a href="#" class="prev-page">&laquo;</a>
 		<a href="#" class="page-num active">1</a>
@@ -609,24 +626,6 @@ document.getElementById('experience-count').setAttribute('data-target', '5');
   </section>
   
   <style>
-	#footer {
-  position: relative;
-}
-
-.fade-images {
-  position: relative;
-  width: 60px;
-  height: 70px; /* Adjust the height as needed */
-  overflow: hidden; /* Hides overflow images */
-  margin-top: 20px; /* Spacing above the image slider */
-}
-
-.fade-images img {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  animation: fade 10s infinite; /* Fade animation */
-}
 
 /* @keyframes fade {
   0% { opacity: 0; }

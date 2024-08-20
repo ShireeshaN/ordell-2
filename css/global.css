@@ -476,6 +476,24 @@ color:#fecb38;
 
 
 
+#footer {
+  position: relative;
+}
+
+.fade-images {
+  position: relative;
+  width: 60px;
+  height: 70px; /* Adjust the height as needed */
+  overflow: hidden; /* Hides overflow images */
+  margin-top: 20px; /* Spacing above the image slider */
+}
+
+.fade-images img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  animation: fade 10s infinite; /* Fade animation */
+}
 
 
   
