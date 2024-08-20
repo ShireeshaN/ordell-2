@@ -14,10 +14,9 @@ margin:0;
 #center .fade-carousel {
 position: relative;
 height: 100%;
+
 }
-#center .fade-carousel .carousel-inner .item {
-height: 100vh;
-}
+
 #center .fade-carousel .carousel-indicators > li {
 margin: 0 2px;
 background-color: #f39c12;
@@ -114,6 +113,7 @@ padding-top:15px;
     border-color: #1abc9c;
     outline: none;
     margin: 20px auto;
+    object-fit
 }
 
 /********************************/
@@ -158,6 +158,8 @@ background-size: cover;
 @media screen and (max-width: 640px){
     .hero h1 { font-size: 4em; }    
 }
+
+
 
 /********************* center_end ****************/
 /********************* middle ****************/
