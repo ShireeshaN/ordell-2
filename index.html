@@ -17,6 +17,13 @@
 	<link href="lib/animate/animate.min.css" rel="stylesheet">
 
 	    <!-- Animate.css -->
+		<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+
+	    <!-- Animate.css -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     
 		<!-- wow.js -->
@@ -78,10 +85,10 @@
 	 <div class="row">
 	  <div class="middle_1 clearfix">
 	   <div class="middle_2">
-		<h2 class="textss">ORDELL INTERIORS</h2>
-		<p class="para1">Crafting Timeless Trends</p>
+		<h2 class="textss" data-aos="fade-right">ORDELL INTERIORS</h2>
+		<p class="para1" data-aos="fade-left">Crafting Timeless Trends</p>
 		
-		<ul class="social-lists">
+		<ul class="social-lists" data-aos="fade-right">
 			<li><a href="#"><i class="fa fa-facebook pkk"></i></a></li>
 			<li><a href="#"><i class="fa fa-twitter pkk"></i></a></li>
 			<li><a href="#"><i class="fa fa-instagram pkk"></i></a></li>
@@ -167,13 +174,13 @@
   
   
   <section class="stats-section  mt-3">
-    <div class="stat">
+    <div class="stat" data-aos="fade-left">
         <span class="count" id="projects-count">0</span><span class="plussize">+</span> <br/>Projects
     </div>
-    <div class="stat">
+    <div class="stat" data-aos="fade-left">
         <span class="count" id="team-count">0</span><span class="plussize">+</span>  <br/>Team
     </div>
-    <div class="stat">
+    <div class="stat" data-aos="fade-right">
         <span class="count" id="experience-count">5</span><span class="plussize">+</span>  <br/>Experience
     </div>
 </section>
@@ -259,7 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (count < target) {
         counter.textContent = Math.ceil(count + increment);
-        setTimeout(updateCount, 50); // Adjust the interval time for faster or slower counting
+        setTimeout(updateCount, 30); // Adjust the interval time for faster or slower counting
       } else {
         counter.textContent = target;
       }
@@ -280,76 +287,76 @@ document.getElementById('experience-count').setAttribute('data-target', '5');
 	<div class="gallery">
 		<!-- Gallery items will be dynamically inserted here -->
 		<div class="gallery-item wow fadeInUpBig animate__animated">
-			<img src="img/ordell-images/15.png" alt="Gallery Image 1">
+			<img src="img/ordell-images/15.png" alt="Gallery Image 1" data-aos="fade-left">
 		</div>
 		<div class="gallery-item wow zoomInUp animate__animated">
-			<img src="img/ordell-images/20.png" alt="Gallery Image 2">
+			<img src="img/ordell-images/20.png" alt="Gallery Image 2" data-aos="fade-right">
 		</div>
 		<div class="gallery-item wow zoomInUp animate__animated">
-			<img src="img/ordell-images/21.png" alt="Gallery Image 3">
+			<img src="img/ordell-images/21.png" alt="Gallery Image 3" data-aos="fade-left">
 		</div>
 		<div class="gallery-item wow zoomIn animate__animated">
-			<img src="img/ordell-images/4.png" alt="Gallery Image 4">
+			<img src="img/ordell-images/4.png" alt="Gallery Image 4" data-aos="fade-right">
 		</div>
 		<div class="gallery-item wow zoomIn">
-			<img src="img/ordell-images/5.png" alt="Gallery Image 5">
+			<img src="img/ordell-images/5.png" alt="Gallery Image 5" data-aos="fade-left">
 		</div>
 		<div class="gallery-item wow zoomIn">
-			<img src="img/ordell-images/7.png" alt="Gallery Image 6">
+			<img src="img/ordell-images/7.png" alt="Gallery Image 6" data-aos="fade-right">
 		</div>
 		<div class="gallery-item wow zoomIn">
-			<img src="img/ordell-images/8.png" alt="Gallery Image 1">
+			<img src="img/ordell-images/8.png" alt="Gallery Image 1" data-aos="fade-left">
 		</div>
 		<div class="gallery-item wow zoomIn">
-			<img src="img/ordell-images/17.png" alt="Gallery Image 2">
+			<img src="img/ordell-images/17.png" alt="Gallery Image 2" data-aos="fade-right">
 		</div>
 		<div class="gallery-item wow zoomIn">
-			<img src="img/ordell-images/18.png" alt="Gallery Image 3">
+			<img src="img/ordell-images/18.png" alt="Gallery Image 3" data-aos="fade-left">
 		</div>
 		<div class="gallery-item wow zoomIn">
-			<img src="img/ordell-images/19.png" alt="Gallery Image 4">
+			<img src="img/ordell-images/19.png" alt="Gallery Image 4" data-aos="fade-right">
 		</div>
 		<div class="gallery-item wow zoomIn">
-			<img src="img/ordell-images/1.png" alt="Gallery Image 5">
+			<img src="img/ordell-images/1.png" alt="Gallery Image 5" data-aos="fade-left">
 		</div>
 		<div class="gallery-item wow zoomIn">
-			<img src="img/ordell-images/2.png" alt="Gallery Image 6">
+			<img src="img/ordell-images/2.png" alt="Gallery Image 6" data-aos="fade-right">
 		</div>
 		<div class="gallery-item wow zoomIn">
-			<img src="img/ordell-images/6.png" alt="Gallery Image 5">
+			<img src="img/ordell-images/6.png" alt="Gallery Image 5" data-aos="fade-left">
 		</div>
 		<div class="gallery-item wow zoomIn">
-			<img src="img/ordell-images/7.png" alt="Gallery Image 6">
+			<img src="img/ordell-images/7.png" alt="Gallery Image 6" data-aos="fade-right">
 		</div>
 		<div class="gallery-item wow zoomIn">
-			<img src="img/ordell-images/9.png" alt="Gallery Image 1">
+			<img src="img/ordell-images/9.png" alt="Gallery Image 1" data-aos="fade-left">
 		</div>
 		<div class="gallery-item wow zoomIn">
-			<img src="img/ordell-images/10.png" alt="Gallery Image 2">
+			<img src="img/ordell-images/10.png" alt="Gallery Image 2" data-aos="fade-right">
 		</div>
 		<div class="gallery-item wow zoomIn">
-			<img src="img/ordell-images/12.png" alt="Gallery Image 3">
+			<img src="img/ordell-images/12.png" alt="Gallery Image 3" data-aos="fade-left">
 		</div>
 		<div class="gallery-item wow zoomIn">
-			<img src="img/ordell-images/13.png" alt="Gallery Image 4">
+			<img src="img/ordell-images/13.png" alt="Gallery Image 4" data-aos="fade-right">
 		</div>
 		<div class="gallery-item wow zoomIn">
-			<img src="img/ordell-images/14.png" alt="Gallery Image 5">
+			<img src="img/ordell-images/14.png" alt="Gallery Image 5" data-aos="fade-left">
 		</div>
 		<div class="gallery-item wow zoomIn">
-			<img src="img/ordell-images/16.png" alt="Gallery Image 6">
+			<img src="img/ordell-images/16.png" alt="Gallery Image 6" data-aos="fade-right">
 		</div>
 		<div class="gallery-item wow zoomIn">
-			<img src="img/ordell-images/17.png" alt="Gallery Image 3">
+			<img src="img/ordell-images/17.png" alt="Gallery Image 3" data-aos="fade-left">
 		</div>
 		<div class="gallery-item wow zoomIn">
-			<img src="img/ordell-images/18.png" alt="Gallery Image 4">
+			<img src="img/ordell-images/18.png" alt="Gallery Image 4" data-aos="fade-right">
 		</div>
 		<div class="gallery-item wow zoomIn">
-			<img src="img/ordell-images/22.png" alt="Gallery Image 5">
+			<img src="img/ordell-images/22.png" alt="Gallery Image 5" data-aos="fade-left">
 		</div>
 		<div class="gallery-item wow zoomIn">
-			<img src="img/ordell-images/3.png" alt="Gallery Image 6">
+			<img src="img/ordell-images/3.png" alt="Gallery Image 6" data-aos="fade-right">
 		</div>
 	</div>
 
@@ -627,6 +634,43 @@ document.getElementById('experience-count').setAttribute('data-target', '5');
   
   <style>
 
+
+@keyframes slide-left {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slide-right {
+    0% { transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slide-up {
+    0% { transform: translateY(100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slide-down {
+    0% { transform: translateY(-100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.animate-left {
+    animation: slide-left 50s ease-in-out;
+}
+
+.animate-right {
+    animation: slide-right 50s ease-in-out;
+}
+
+.animate-top {
+    animation: slide-down 50s ease-in-out;
+}
+
+.animate-bottom {
+    animation: slide-up 50s ease-in-out;
+}
+
 /* @keyframes fade {
   0% { opacity: 0; }
   20% { opacity: 1; }
@@ -695,12 +739,25 @@ document.getElementById('experience-count').setAttribute('data-target', '5');
     });
 </script>
 
+
+<script>
+	AOS.init({
+	  duration: 1000, // duration of the animation in milliseconds
+	  once: true // whether animation should happen only once - while scrolling down
+	});
+  </script>
+
 <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
 	<script>AOS.init()</script>
 	<script>
 		new WOW().init();
 	</script>
+
+<script src="lib/wow/wow.min.js"></script>
+<script>
+	AOS.init();
+</script>
 
 </body>
 </html>
