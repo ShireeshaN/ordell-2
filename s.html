@@ -1,262 +1,451 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery with Pagination and Popup</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <style>
-        .gallery-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
-        }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        .gallery-item {
-            position: relative;
-            width: calc(33.33% - 20px);
-            margin: 10px;
-            overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            animation: fly-in 0.6s ease-in-out;
-        }
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-        @keyframes fly-in {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-        .popup-content {
-            position: relative;
-            max-width: 80%;
-            max-height: 80%;
-        }
-        .popup-content img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        .popup .close, .popup .prev, .popup .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            color: white;
-            font-size: 2em;
-            cursor: pointer;
-            z-index: 1001;
-        }
-        .popup .close {
-            top: 20px;
-            right: 20px;
-            transform: translateY(0);
-        }
-        .popup .prev {
-            left: 10px;
-        }
-        .popup .next {
-            right: 10px;
-        }
-        .pagination {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .pagination a {
-            color: #333;
-            padding: 8px 16px;
-            text-decoration: none;
-            transition: background-color 0.3s;
-            margin: 0 2px;
-        }
-        .pagination a.active {
-            background-color: #4CAF50;
-            color: white;
-        }
-        .pagination a:hover:not(.active) {
-            background-color: #ddd;
-        }
-        @media (max-width: 768px) {
-            .gallery-item {
-                width: calc(50% - 20px);
-            }
-        }
-        @media (max-width: 576px) {
-            .gallery-item {
-                width: calc(100% - 20px);
-            }
-        }
-    </style>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ordell Interior</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/global.css" rel="stylesheet">
+	<link href="css/services.css" rel="stylesheet">
+	<link href="css/blog.css" rel="stylesheet">
+
+	<link href="css/element.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+	<link rel="icon" href="img/logoord.png" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/global.css" rel="stylesheet">
+	<link href="css/services.css" rel="stylesheet">
+	<link href="css/blog.css" rel="stylesheet">
+	<link href="css/element.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+	<link rel="icon" href="img/logoord.png" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 </head>
+
 <body>
-    <div class="container gallery-container">
-        <div class="gallery">
-            <!-- Gallery items will be dynamically inserted here -->
-            <div class="gallery-item">
-                <img src="img/ordell-images/13.png" alt="Gallery Image 1">
-            </div>
-            <div class="gallery-item">
-                <img src="img/ordell-images/13.png" alt="Gallery Image 2">
-            </div>
-            <div class="gallery-item">
-                <img src="img/ordell-images/13.png" alt="Gallery Image 3">
-            </div>
-            <div class="gallery-item">
-                <img src="img/ordell-images/13.png" alt="Gallery Image 4">
-            </div>
-            <div class="gallery-item">
-                <img src="img/ordell-images/13.png" alt="Gallery Image 5">
-            </div>
-            <div class="gallery-item">
-                <img src="img/ordell-images/13.png" alt="Gallery Image 6">
-            </div>
-            <div class="gallery-item">
-                <img src="img/ordell-images/13.png" alt="Gallery Image 1">
-            </div>
-            <div class="gallery-item">
-                <img src="img/ordell-images/13.png" alt="Gallery Image 2">
-            </div>
-            <div class="gallery-item">
-                <img src="img/ordell-images/13.png" alt="Gallery Image 3">
-            </div>
-            <div class="gallery-item">
-                <img src="img/ordell-images/13.png" alt="Gallery Image 4">
-            </div>
-            <div class="gallery-item">
-                <img src="img/ordell-images/13.png" alt="Gallery Image 5">
-            </div>
-            <div class="gallery-item">
-                <img src="img/ordell-images/13.png" alt="Gallery Image 6">
-            </div>
-        </div>
-        <div class="pagination">
-            <a href="#" class="prev-page">&laquo;</a>
-            <a href="#" class="page-num active">1</a>
-            <a href="#" class="page-num">2</a>
-            <a href="#" class="page-num">3</a>
-            <a href="#" class="page-num">4</a>
-            <a href="#" class="page-num">5</a>
-            <a href="#" class="next-page">&raquo;</a>
-        </div>
+	<section id="header" class="clearfix">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+               <div class="container">
+                   <!-- Brand and toggle get grouped for better mobile display -->
+                   <div class="navbar-header">
+               <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                   <span class="sr-only">Toggle navigation</span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+               </button>
+           <!-- <a class="navbar-brand" href="index.html"> <i class="fa fa-home"></i> Interior</a> -->
+           <a href="index.html"><img class="logosizes" src="img/ordelllogonew.png"/></a>
+       
+           </div>
+                   <!-- Collect the nav links, forms, and other content for toggling -->
+                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                           <li class="active"><a href="index.html">HOME</a></li>
+                           <li><a href="about.html">ABOUT</a></li>
+                           <!-- Portfolio Dropdown -->
+                           <li class="dropdown">
+                               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                   PORTFOLIO <span class="caret"></span>
+                               </a>
+                               <ul class="dropdown-menu" role="menu">
+                                   
+                                   <li><a href="3drenders.html">3D RENDRES</a></li>
+                                   <li><a href="gallery.html">GALLERY</a></li>
+                               </ul>
+                           </li>
+                           <li><a href="careers.html">CAREERS</a></li>
+                           
+                           <li><a href="contact.html">CONTACT</a></li>
+                           
+                           <li class="well_1 clearfix"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                           <li class="well_1 clearfix"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                           <li class="well_1 clearfix"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                   </div><!-- /.navbar-collapse -->
+               </div><!-- /.container-fluid -->
+           </nav>
+       </section>
+	<section >
+		<div class="container">
+			<h1 class="heading">Heading</h1>
+		</div>
+	</section>
+
+	
+
+	<div class="container">
+    <!-- Main Heading Section -->
+    <div class="main-heading">
+        <h1>Senior Interior Designer</h1>
     </div>
 
-    <div class="popup">
-        <span class="close">&times;</span>
-        <span class="prev">&#10094;</span>
-        <span class="next">&#10095;</span>
-        <div class="popup-content">
-            <img src="" alt="Popup Image">
+    <!-- Subheading and Points Section -->
+    <div class="content-section">
+        <h2 class="sub-heading">Key Responsibilities:</h2>
+        <ul class="points">
+            <li>Develop accurate and detailed 3D models based on design briefs, concepts, or technical drawings.</li>
+            <li>Apply textures, materials, and shaders to 3D models to achieve the desired visual effects and realism.</li>
+            <li>Set up lighting and rendering parameters to create high-quality, photorealistic images or animations.</li>
+			<li>Animate 3D models, including character rigging and movement, to create dynamic scenes or sequences.</li>
+		
+			<li>Keep up-to-date with the latest trends, tools, and techniques in 3D design and animation.</li>
+			<li>Present 3D designs and concepts to clients, gather feedback, and make necessary adjustments to meet their requirements.</li>
+			<li>Troubleshoot and resolve any technical issues that arise during the 3D modeling or rendering process.</li>
+			<li>Organize and manage 3D assets, ensuring proper file structure and documentation for easy access and future reference.</li>
+        </ul>
+
+		<h2 class="sub-heading">Requirements:</h2>
+        <ul class="points">
+            <li>Bachelor’s degree in business, Marketing, or a related field.</li>
+            <li>Strong knowledge of industry-standard 3D modeling, texturing, and rendering software such as Autodesk Maya, 3ds Max, Blender, Cinema 4D, or similar.</li>
+            <li>Experience in animating 3D models, including rigging, character animation, and motion graphics.</li>
+			<li>Proficiency in applying textures, materials, and shaders to achieve realistic or stylized visual effects.</li>
+			<li>A solid understanding of color theory, composition, lighting, and aesthetics.</li>
+			
+        </ul>
+        <div class="button-container">
+            <button type="button" class="action-button" data-toggle="modal" data-target="#resumeModal">Apply Now</button>
         </div>
     </div>
+</div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            let currentIndex = 0;
-            const galleryItems = $('.gallery-item img');
-            const popup = $('.popup');
-            const popupImage = $('.popup-content img');
-            const itemsPerPage = 6;
-            const paginationLinks = $('.pagination a.page-num');
+<style>
+	/* Container */
+.container {
+    width: 100%;
+    padding: 20px;
+}
 
-            function showPopup(index) {
-                const imgSrc = $(galleryItems[index]).attr('src');
-                popupImage.attr('src', imgSrc);
-                popup.fadeIn();
-                currentIndex = index;
-            }
+/* Main Heading */
+.main-heading {
+    background-color: #BD9867; /* Background color for the heading section */
+    color: white;
+    padding: 18px 0;
+    text-align: center;
+    width: 100%;
+}
 
-            function closePopup() {
-                popup.fadeOut();
-            }
+.main-heading h1 {
+    margin: 0;
+    font-size: 24px; /* Size of the main heading text */
+    text-transform: uppercase; /* Makes the text uppercase */
+}
 
-            function showNext() {
-                currentIndex = (currentIndex + 1) % galleryItems.length;
-                showPopup(currentIndex);
-            }
+/* Content Section */
+.content-section {
+    margin-top: 20px;
+    width: 100%;
+}
 
-            function showPrev() {
-                currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
-                showPopup(currentIndex);
-            }
+.sub-heading {
+    color: #000; /* Text color of subheadings */
+    font-size: 18px; /* Size of the subheading text */
+    margin-bottom: 10px;
+}
 
-            function paginateGallery(pageIndex) {
-                galleryItems.parent().hide();
-                galleryItems.slice(pageIndex * itemsPerPage, (pageIndex + 1) * itemsPerPage).parent().show();
-                paginationLinks.removeClass('active');
-                paginationLinks.eq(pageIndex).addClass('active');
-            }
+.points {
+    list-style-type: disc; /* Bulleted list style */
+    padding-left: 40px; /* Indentation for the list */
+}
 
-            galleryItems.on('click', function() {
-                const index = galleryItems.index(this);
-                showPopup(index);
-            });
+.points li {
+    margin-bottom: 8px; /* Space between each list item */
+    font-size: 16px; /* Size of the list item text */
+}
 
-            $('.close').on('click', closePopup);
-            $('.next').on('click', showNext);
-            $('.prev').on('click', showPrev);
-            popup.on('click', function(e) {
-                if (!$(e.target).is('.popup-content img, .next, .prev')) {
-                    closePopup();
-                }
-            });
+/* Button Container */
+.button-container {
+    margin-top: 20px; /* Space above the button container */
+    text-align: end; /* Centers the button within the container */
+}
 
-            paginationLinks.on('click', function(e) {
-                e.preventDefault();
-                const pageIndex = $(this).index() - 1;
-                paginateGallery(pageIndex);
-            });
+/* Apply Now Button */
+.action-button {
+    background-color: #000000; /* Background color of the button */
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Padding inside the button */
+    font-size: 20px; /* Size of the button text */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
 
-            $('.prev-page').on('click', function(e) {
-                e.preventDefault();
-                const activePage = $('.pagination a.page-num.active').index() - 1;
-                if (activePage > 0) {
-                    paginateGallery(activePage - 1);
-                }
-            });
+.action-button:hover {
+    background-color: #000000; /* Background color of the button on hover */
+    color: #ffffff; /* Text color of the button on hover */
+}
+</style>
 
-            $('.next-page').on('click', function(e) {
-                e.preventDefault();
-                const activePage = $('.pagination a.page-num.active').index() - 1;
-                if (activePage < paginationLinks.length - 1) {
-                    paginateGallery(activePage + 1);
-                }
-            });
+	<!-- Modal -->
+	<div class="modal fade" id="resumeModal" tabindex="-1" role="dialog" aria-labelledby="resumeModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="resumeModalLabel">Submit Your Resume</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form id="resumeForm" action="send_email.php" method="post" enctype="multipart/form-data">
+						<div class="form-heading">
+							<h3>Application Form</h3>
+						</div>
+						<div class="form-group">
+							<label for="fullName">Full Name <span class="required">*</span></label>
+							<input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name" required>
+							<div class="error-message" id="fullNameError"></div>
+						</div>
+						<div class="form-group">
+							<label for="qualification">Qualification <span class="required">*</span></label>
+							<input type="text" class="form-control" id="qualification" name="qualification" placeholder="Enter your qualification" required>
+							<div class="error-message" id="qualificationError"></div>
+						</div>
+						<div class="form-group">
+							<label for="experience">Experience <span class="required">*</span></label>
+							<input type="text" class="form-control" id="experience" name="experience" placeholder="Enter your experience" required>
+							<div class="error-message" id="experienceError"></div>
+						</div>
+						<div class="form-group">
+							<label for="mobile">Mobile <span class="required">*</span></label>
+							<input type="tel" class="form-control" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+							<div class="error-message" id="mobileError"></div>
+						</div>
+						<div class="form-group">
+							<label for="email">E-mail ID <span class="required">*</span></label>
+							<input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" required>
+							<div class="error-message" id="emailError"></div>
+						</div>
+						<div class="form-group">
+							<label for="resume">Upload Resume <span class="required">*</span></label>
+							<input type="file" class="form-control-file" id="resume" name="resume" required>
+							<div class="error-message" id="resumeError"></div>
+						</div>
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 
-            paginateGallery(0);
-        });
-    </script>
+
+
+    <style>
+		/* Form Container */
+		.modal-dialog {
+			max-width: 600px;
+			margin: 30px auto;
+		}
+
+		.modal-content {
+			padding: 20px;
+			border-radius: 8px;
+			border: 1px solid #ddd;
+		}
+
+		.modal-header {
+			border-bottom: none;
+			text-align: center;
+		}
+
+		.modal-title {
+			font-size: 24px;
+			margin: 0;
+		}
+
+		/* Form Styling */
+		.form-heading {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		/* Form Styling */
+		.form-group {
+			margin-bottom: 15px;
+		}
+
+		.form-group label {
+			color: #333;
+			font-size: 16px;
+			display: block;
+			margin-bottom: 5px;
+		}
+
+		.form-group .form-control {
+			border-radius: 4px;
+			border: 1px solid #ccc;
+			padding: 10px;
+		}
+
+		.form-group .form-control-file {
+			padding: 3px;
+		}
+
+		/* Red Asterisk */
+		.form-group label span.required {
+			color: red;
+		}
+
+		/* Submit Button */
+		.btn-primary {
+			background-color: #000;
+			border-color: #000;
+			color: #fff;
+			padding: 10px 20px;
+			font-size: 16px;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		.btn-primary:hover {
+			background-color: #333;
+			border-color: #333;
+		}
+
+		/* Error Message */
+		.error-message {
+			color: red;
+			font-size: 14px;
+			margin-top: 5px;
+		}
+	</style>
+
+<style>
+	/* Form Container */
+	.modal-dialog {
+		max-width: 500px;
+		margin: 30px auto;
+	}
+
+	.modal-content {
+		padding: 20px;
+		border-radius: 8px;
+		border: 1px solid #ddd;
+	}
+
+	.modal-header {
+		border-bottom: none;
+		text-align: center;
+	}
+
+	.modal-title {
+		font-size: 24px;
+		margin: 0;
+	}
+
+	/* Form Heading */
+	.form-heading {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	/* Form Styling */
+	.form-group {
+		margin-bottom: 15px;
+	}
+
+	.form-group label {
+		color: #333;
+		font-size: 16px;
+		display: block;
+		margin-bottom: 5px;
+	}
+
+	.form-group .form-control {
+		border-radius: 4px;
+		border: 1px solid #ccc;
+		padding: 10px;
+	}
+
+	.form-group .form-control-file {
+		padding: 3px;
+	}
+
+	/* Red Asterisk */
+	.form-group label span.required {
+		color: red;
+	}
+
+	/* Submit Button */
+	.btn-primary {
+		background-color: #000;
+		border-color: #000;
+		color: #fff;
+		padding: 10px 20px;
+		font-size: 16px;
+		border-radius: 4px;
+		cursor: pointer;
+		text-align: end;
+	}
+
+	.btn-primary:hover {
+		background-color: #333;
+		border-color: #333;
+	}
+
+	/* Error Message */
+	.error-message {
+		color: red;
+		font-size: 14px;
+		margin-top: 5px;
+	}
+</style>
+
+<script>
+	document.getElementById('resumeForm').addEventListener('submit', function(event) {
+		event.preventDefault(); // Prevent form submission
+		let hasError = false;
+		
+		// Clear previous error messages
+		document.querySelectorAll('.error-message').forEach(function(element) {
+			element.textContent = '';
+		});
+
+		// Validation
+		if (!document.getElementById('fullName').value) {
+			document.getElementById('fullNameError').textContent = 'This field is required.';
+			hasError = true;
+		}
+		if (!document.getElementById('qualification').value) {
+			document.getElementById('qualificationError').textContent = 'This field is required.';
+			hasError = true;
+		}
+		if (!document.getElementById('experience').value) {
+			document.getElementById('experienceError').textContent = 'This field is required.';
+			hasError = true;
+		}
+		if (!document.getElementById('mobile').value) {
+			document.getElementById('mobileError').textContent = 'This field is required.';
+			hasError = true;
+		}
+		if (!document.getElementById('email').value) {
+			document.getElementById('emailError').textContent = 'This field is required.';
+			hasError = true;
+		}
+		if (!document.getElementById('resume').files.length) {
+			document.getElementById('resumeError').textContent = 'This field is required.';
+			hasError = true;
+		}
+
+		if (!hasError) {
+			alert('Form submitted successfully!');
+			// Here you can handle the form submission, e.g., using AJAX
+			// or by simply submitting the form if using a traditional approach
+			this.submit();
+		}
+	});
+
+
+	
+</script>
+
 </body>
+
 </html>
