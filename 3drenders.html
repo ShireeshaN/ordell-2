@@ -59,15 +59,9 @@
 			   </div><!-- /.container-fluid -->
 		   </nav>
 	   </section>
-<section id="services_main">
- <div class="container">
-  <div class="row">
-   <div >
- 
-   </div>
-  </div>
- </div>
-</section>
+
+
+
 
 <div class="gallery-section">
 	<h2>3D RENDERS</h2>
@@ -129,6 +123,68 @@
 		</div>
 	</div>
 </div>
+<style>
+
+.gallery-item:nth-child(1) { animation-delay: 0s; }
+.gallery-item:nth-child(2) { animation-delay: 0.2s; }
+.gallery-item:nth-child(3) { animation-delay: 0.4s; }
+.gallery-item:nth-child(4) { animation-delay: 0.6s; }
+.gallery-item:nth-child(5) { animation-delay: 0.8s; }
+.gallery-item:nth-child(6) { animation-delay: 1s; }
+/* Add more nth-child rules if needed */
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    25% {
+        transform: translateX(0%);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    75% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+</style>
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+    const galleryWrapper = document.querySelector('.gallery-wrapper');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const itemCount = galleryItems.length;
+    let currentIndex = 0;
+
+    function updateGallery() {
+        const offset = -currentIndex * 100;
+        galleryWrapper.style.transform = `translateX(${offset}%)`;
+    }
+
+    function moveToNextImage() {
+        currentIndex = (currentIndex + 1) % itemCount;
+        updateGallery();
+    }
+
+    function moveToPrevImage() {
+        currentIndex = (currentIndex - 1 + itemCount) % itemCount;
+        updateGallery();
+    }
+
+    document.querySelector('.next-btn').addEventListener('click', moveToNextImage);
+    document.querySelector('.prev-btn').addEventListener('click', moveToPrevImage);
+
+    setInterval(moveToNextImage, 3000); // Automatically change image every 3 seconds
+});
+</script>
 
 <div id="popup" class="popup">
 	<span class="close">&times;</span>
