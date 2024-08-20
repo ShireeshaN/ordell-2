@@ -449,7 +449,7 @@ color:#fecb38;
 
 .para1{
   font-family:Chub Gothic,sans-serif;
-  padding-bottom: 100px;
+  padding-bottom: 10px;
   font-size: 14px
 };
 
@@ -476,6 +476,37 @@ color:#fecb38;
 
 
 
+#footer {
+  position: relative;
+}
+
+.fade-images {
+  position: relative;
+  width: 60px;
+  height: 70px; /* Adjust the height as needed */
+  overflow: hidden; /* Hides overflow images */
+  margin-top: 20px; /* Spacing above the image slider */
+}
+
+.fade-images img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  animation: fade 10s infinite; /* Fade animation */
+}
+/* Mobile View */
+@media (max-width: 600px) {
+  .fade-images {
+      width: 100%; /* Full width on mobile */
+      height: auto; /* Adjusts height to maintain aspect ratio */
+      margin-top: 10px; /* Reduce spacing on mobile */
+  }
+
+  .fade-images img {
+      height: auto; /* Maintain aspect ratio */
+      width: 100%; /* Full width on mobile */
+  }
+}
 
 
   

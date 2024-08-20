@@ -6706,9 +6706,7 @@ button.close {
     position: relative;
     overflow: hidden;
     width: 100%;
-  
-
-    border-radius: 80px;
+    border-radius: 40px;
     
     
 }
