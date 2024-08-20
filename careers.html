@@ -17,6 +17,22 @@
 	<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
 	<script src="js/jquery-2.1.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+
+	<!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+
+	    <!-- Animate.css -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+		<!-- wow.js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+	<!-- Include Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
 <body>
@@ -74,31 +90,31 @@
 	
 
 	<div class="container">
-		<div class="heading">Current Jobs</div>
+		<div class="heading" data-aos="fade-down">Current Jobs</div>
 	
 		<div class="card-container">
-			<div class="card">
+			<div class="card" data-aos="fade-left">
 				<h2 >3D Designer</h2>
 				<p>Experience Required:<span>1+ Year</span></p>
 				<p ><i class="fa fa-map-marker" style="margin-right: 15px;"></i>Hyderabad/Telangana</p>
 				<button class="text-white"><a href="3d-designer.html" class="text">View & Apply</button></a>
 			</div>
 	
-			<div class="card">
+			<div class="card" data-aos="fade-right">
 				<h2>Senior Interior Designer</h2>
 				<p>Experience Required:<span>2+ Year</span></p>
 				<p><i class="fa fa-map-marker"  style="margin-right: 15px;"></i>Hyderabad/Telangana</p>
 				<button class="text-white"><a href="senior-interior-designer.html" class="text">View & Apply</button></a>
 			</div>
 
-			<div class="card">
+			<div class="card" data-aos="fade-left">
 				<h2 >Intern</h2>
 				<p>Experience Required:<span>3+ months</span></p>
 				<p ><i class="fa fa-map-marker" style="margin-right: 15px;"></i>Hyderabad/Telangana</p>
 				<button class="text-white"><a href="intern.html" class="text">View & Apply</button></a>
 			</div>
 	
-			<div class="card">
+			<div class="card" data-aos="fade-right">
 				<h2>Site Supervisor</h2>
 				<p>Experience Required:<span>1+ Year</span></p>
 				<p><i class="fa fa-map-marker"  style="margin-right: 15px;"></i>Hyderabad/Telangana</p>
@@ -108,6 +124,46 @@
 
 		</div>
 	</div>
+
+
+	<style>
+		
+@keyframes slide-left {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slide-right {
+    0% { transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slide-up {
+    0% { transform: translateY(100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slide-down {
+    0% { transform: translateY(-100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.animate-left {
+    animation: slide-left 50s ease-in-out;
+}
+
+.animate-right {
+    animation: slide-right 50s ease-in-out;
+}
+
+.animate-top {
+    animation: slide-down 50s ease-in-out;
+}
+
+.animate-bottom {
+    animation: slide-up 50s ease-in-out;
+}
+	</style>
 
 
 	<style>
@@ -431,6 +487,13 @@
     <script>
       new WOW().init();
     </script>
+
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script>AOS.init()</script>
+<script>
+	new WOW().init();
+</script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css">
