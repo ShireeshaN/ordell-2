@@ -80,7 +80,7 @@ if ( typeof define === 'function' && define.amd ) {
 })( window );
 
 
-<script>
+
 	function toggleMenu() {
 		document.querySelector('nav ul').classList.toggle('show');
 	}
@@ -92,4 +92,3 @@ if ( typeof define === 'function' && define.amd ) {
 			}
 		});
 	});
-</script>
