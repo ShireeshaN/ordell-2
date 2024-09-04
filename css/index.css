@@ -10,11 +10,11 @@ Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152
 #center {
   padding: 0;
   margin: 0;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 #center .fade-carousel {
   position: relative;
-  height: 100%;
+  height: 80%;
 }
 
 #center .fade-carousel .carousel-indicators > li {
@@ -173,7 +173,7 @@ background-size: cover;
   background-color: #000;
 }
 .middles {
-  padding-top: 100px;
+  padding-top: 130px;
 
   background-color: #ffffff;
   color: #000;
@@ -778,11 +778,13 @@ background-size: cover;
 }
 
 .center {
-  /* width: 80%; Adjust the width as needed */
+  width: 80%; 
+  /* Adjust the width as needed */
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  border-radius: 40px;
+  /* width: 100%; */
 }
 
 .carousel {
