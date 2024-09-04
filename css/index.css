@@ -966,7 +966,7 @@ color: #fff; */
   opacity: 0;
   visibility: hidden;
   background: #fff;
-  fill: #b96f00;
+  fill: green;
   padding: 10px;
   border-radius: 50px;
   transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
@@ -987,7 +987,7 @@ color: #fff; */
 }
 .tooltip-container:hover .tooltip3:hover {
   background: #1db954;
-  fill: #000000;
+  fill: #fff;
 }
 /* Fim do tooltip whatsApp */
 
@@ -1000,7 +1000,7 @@ color: #fff; */
   opacity: 0;
   visibility: hidden;
   background: #fff;
-  fill: #b96f00;
+  fill: #ee2a7b;
   padding: 10px;
   border-radius: 50px;
   transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
@@ -1020,7 +1020,7 @@ color: #fff; */
   justify-content: center;
 }
 .tooltip-container:hover .tooltip4:hover {
-  background: #8c9eff;
+  background: linear-gradient(#f9ce34, #ee2a7b, #6228d7);
   fill: #fff;
 }
 /* Fim do tooltip Discord */
