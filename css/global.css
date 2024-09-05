@@ -226,6 +226,11 @@ color:#fecb38;
  padding-bottom:30px;
  background:black;
  }
+ @media (max-width:992px){
+  #footer{
+    padding-bottom: 10px;
+  }
+ }
 .footer_1 h3{ 
  color: black;
  font-weight: bold;
