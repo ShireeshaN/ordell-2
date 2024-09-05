@@ -1192,3 +1192,28 @@ color: #fff; */
   border-radius: 50%;
   z-index: -1;
 }
+
+
+
+@media (max-width:992px){
+  .footer_1 ul{
+    text-align: left;
+  }
+}
+
+.footer_main_3 ul{
+  text-align: right;
+}
+
+.phone_list{
+  display: none;
+}
+
+@media (max-width:992px){
+  .footer_main_3 ul{
+    text-align: left;
+  }
+  .phone_list br{
+    display: block;
+  }
+}
