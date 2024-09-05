@@ -327,7 +327,7 @@ color:#fecb38;
  font-size: 22px;
 }
 #header .navbar-default .navbar-toggle .icon-bar {
- background-color: #1d1b1b;
+ background-color: #ffffff;
 }
 #header .navbar-default .navbar-brand {
  padding-right: 10px;
@@ -453,9 +453,10 @@ color:#fecb38;
 }
 
 .para1{
-  font-family:Chub Gothic,sans-serif;
+  font-family:"Chub Gothic",sans-serif;
   padding-bottom: 10px;
-  font-size: 14px
+  font-size: 14px;
+  font-style: italic;
 };
 
 .textfooter{
