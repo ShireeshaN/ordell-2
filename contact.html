@@ -193,42 +193,42 @@
 			<button class="send-btn" type="submit" data-aos="fade-right">Send Message</button>
 		</form>
 	</div>
-<style>
-	.container-btn-file {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: white;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-        text-align: center;
-        position: relative;
-    }
+	<style>
+		.container-btn-file {
+			display: inline-block;
+			padding: 10px 20px;
+			background-color: #007bff;
+			color: white;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+			text-align: center;
+			position: relative;
+		}
 
-    .container-btn-file input[type="file"] {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        cursor: pointer;
-    }
-</style>
-<script>
-	 document.getElementById('file-upload').addEventListener('change', function() {
-        var fileInput = document.getElementById('file-upload');
-        var fileLabel = document.getElementById('file-label');
-        
-        if (fileInput.files.length > 0) {
-            var fileName = fileInput.files[0].name;
-            fileLabel.textContent = fileName;
-        } else {
-            fileLabel.textContent = 'Upload File';
-        }
-    });
-</script>
+		.container-btn-file input[type="file"] {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			cursor: pointer;
+		}
+	</style>
+	<script>
+		document.getElementById('file-upload').addEventListener('change', function () {
+			var fileInput = document.getElementById('file-upload');
+			var fileLabel = document.getElementById('file-label');
+
+			if (fileInput.files.length > 0) {
+				var fileName = fileInput.files[0].name;
+				fileLabel.textContent = fileName;
+			} else {
+				fileLabel.textContent = 'Upload File';
+			}
+		});
+	</script>
 
 	<section id="contact_inner" data-aos="fade-left">
 		<iframe

@@ -179,7 +179,7 @@
 			<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
 				<div class="overlay"></div>
 
-				<div class="carousel-inner curveslide">
+				<div class="carousel-inner curveslide footer-laptop">
 					<div class="item slides active">
 						<video class="video-fluid" width="100%" autoplay muted loop>
 							<source src="media/IMG_9953 (1).mp4" type="video/mp4">
@@ -201,6 +201,33 @@
 					<div class="item slides">
 						<video class="video-fluid" width="100%" autoplay muted loop>
 							<source src="media/IMG_9956 (1).mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
+				</div>
+
+				<div class="carousel-inner curveslide footer-mobile">
+					<div class="item slides active">
+						<video class="video-fluid" width="100%" autoplay muted loop>
+							<source src="media/mobile_video_1.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
+					<div class="item slides">
+						<video class="video-fluid" width="100%" autoplay muted loop>
+							<source src="media/mobile_video_2.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
+					<div class="item slides">
+						<video class="video-fluid" width="100%" autoplay muted loop>
+							<source src="media/mobile_video_3.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
+					<div class="item slides">
+						<video class="video-fluid" width="100%" autoplay muted loop>
+							<source src="media/mobile_video_4.mp4" type="video/mp4">
 							Your browser does not support the video tag.
 						</video>
 					</div>
@@ -263,6 +290,15 @@
 			top: 50%;
 		}
 
+		@media (max-width:992px) {
+			.carousel-control-prev{
+				left: 10px;
+			}
+			.carousel-control-next{
+				right: 0;
+			}			
+		}
+
 		.carousel-control-prev-icon,
 		.carousel-control-next-icon {
 			/* background-color: rgba(0, 0, 0, 0.5); */
@@ -275,10 +311,14 @@
 
 		.carousel-control-prev-icon {
 			background-image: url('img/left-arrow-svgrepo-com.svg');
+			width: 100px;
+			height: 100px;
 		}
 
 		.carousel-control-next-icon {
 			background-image: url('img/right-arrow-svgrepo-com.svg');
+			width: 100px;
+			height: 100px;
 		}
 
 		.carousel-indicators {
