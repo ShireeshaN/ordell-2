@@ -517,3 +517,30 @@ h6 {
 .location{
   font-size: 1.3rem;
 }
+.footer-laptop{
+  display: block;
+}
+.footer-mobile{
+  display: none;
+}
+@media (max-width:992px){
+  .footer_main_3 ul{
+    text-align: left;
+  }
+  .textfooter{
+    text-align: left;
+  }
+  .footer-laptop{
+    display: none;
+  }
+  .footer-mobile{
+    display: block;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .phone_list br{
+    display: block;
+  }
+}
