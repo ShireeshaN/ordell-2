@@ -79,14 +79,6 @@
 			</div><!-- /.container-fluid -->
 		</nav>
 	</section>
-	<div class="row">
-		<div>
-
-
-		</div>
-	</div>
-	</div>
-	</section>
 
 	<style>
 		@keyframes slide-left {
@@ -181,7 +173,7 @@
 				<div class="form-group" data-aos="fade-left">
 					<label for="file-upload" class="container-btn-file">
 						Upload File
-						<input id="file-upload" class="file" name="text" type="file" />
+						<input id="file-upload" class="upload-file" name="text" type="file" />
 					</label>
 				</div>
 			</div>
@@ -194,7 +186,7 @@
 		</form>
 	</div>
 	<style>
-		.container-btn-file {
+		/* .container-btn-file {
 			display: inline-block;
 			padding: 10px 20px;
 			background-color: #007bff;
@@ -214,7 +206,12 @@
 			left: 0;
 			opacity: 0;
 			cursor: pointer;
-		}
+		}*/
+		.send-btn{
+			font-family: 'Chub Gothic', sans-serif;
+			width: max-content;
+			padding: 10px 15px;
+		} 
 	</style>
 	<script>
 		document.getElementById('file-upload').addEventListener('change', function () {
@@ -237,7 +234,11 @@
 			referrerpolicy="no-referrer-when-downgrade"></iframe>
 	</section>
 
-
+<style>
+	body,html{
+		overflow-x: hidden;
+	}
+</style>
 
 
 	<section id="footer">
