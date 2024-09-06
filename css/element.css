@@ -8,7 +8,7 @@
 .navbar-default .navbar-toggle{background-color:#b96f00;border-color:#b96f00}.navbar-default .navbar-toggle .icon-bar{background-color:#fff}
 .navbar-default .navbar-toggle:hover,.navbar-default .navbar-toggle:focus{background-color:#fed136}
 
-.navbar-default .nav li a{font-family:font-family: 'Berkshire Swash', cursive;font-weight:400;letter-spacing:1px;color:#000}
+.navbar-default .nav li a{font-family:"Chub Gothic", sans-serif;font-weight:400;letter-spacing:1px;color:#000}
 
 .navbar-default .nav li a:hover,.navbar-default .nav li a:focus{color:#333;outline:0}
 .navbar-default .navbar-nav>.active>a{border-radius:0;color:#fff;background-color:#fed136}

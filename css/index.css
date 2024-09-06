@@ -773,7 +773,7 @@ background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Full viewport height to center vertically */
+  /* height: 100vh; Full viewport height to center vertically */
   margin: 0; /* Remove any default margin */
 }
 

@@ -56,7 +56,7 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="index.html">HOME</a></li>
+						<li class=""><a href="index.html">HOME</a></li>
 						<li><a href="about.html">ABOUT</a></li>
 						<!-- Portfolio Dropdown -->
 						<li class="dropdown">
@@ -90,50 +90,52 @@
 
 
 
-	<div class="container">
-		<div class="row">
-			<div class="heading" data-aos="fade-down">
-				<h3>Current Jobs</h3>
+	<div class="container-fluid">
+		<div class="container">
+			<div class="row">
+				<div class="heading" data-aos="fade-down">
+					<h3>Current Jobs</h3>
+				</div>
+		
+					<div class="col-xs-12 col-lg-6" data-aos="fade-left">
+						<div class="card">
+							<h2>3D Designer</h2>
+							<p class="exp-req">Experience Required : <span>1+ Year</span></p>
+							<p class="location"><i class="fa fa-map-marker" style="margin-right: 15px;"></i>Hyderabad/Telangana</p>
+							<button class="text-white"><a href="3d-designer.html" class="text">View & Apply</button></a>
+						</div>
+					</div>
+		
+					<div class="col-xs-12 col-lg-6" data-aos="fade-right">
+						<div class="card">
+							<h2>Senior Interior Designer</h2>
+							<p class="exp-req">Experience Required : <span>2+ Year</span></p>
+							<p class="location"><i class="fa fa-map-marker" style="margin-right: 15px;"></i>Hyderabad/Telangana</p>
+							<button class="text-white"><a href="senior-interior-designer.html" class="text">View &
+									Apply</button></a>
+						</div>
+					</div>
+		
+					<div class="col-xs-12 col-lg-6" data-aos="fade-left">
+						<div class="card">
+							<h2>Intern</h2>
+							<p class="exp-req">Experience Required :<span>3+ months</span></p>
+							<p class="location"><i class="fa fa-map-marker" style="margin-right: 15px;"></i>Hyderabad/Telangana</p>
+							<button class="text-white"><a href="intern.html" class="text">View & Apply</button></a>
+						</div>
+					</div>
+		
+					<div class="col-xs-12 col-lg-6" data-aos="fade-right">
+						<div class="card">
+							<h2>Site Supervisor</h2>
+							<p class="exp-req">Experience Required : <span>1+ Year</span></p>
+							<p class="location"><i class="fa fa-map-marker" style="margin-right: 15px;"></i>Hyderabad/Telangana</p>
+							<button class="text-white"><a href="supervisor.html" class="text">View & Apply</button></a>
+						</div>
+					</div>
+		
+		
 			</div>
-	
-				<div class="col-xs-12 col-lg-6" data-aos="fade-left">
-					<div class="card">
-						<h2>3D Designer</h2>
-						<p>Experience Required:<span>1+ Year</span></p>
-						<p><i class="fa fa-map-marker" style="margin-right: 15px;"></i>Hyderabad/Telangana</p>
-						<button class="text-white"><a href="3d-designer.html" class="text">View & Apply</button></a>
-					</div>
-				</div>
-	
-				<div class="col-xs-12 col-lg-6" data-aos="fade-right">
-					<div class="card">
-						<h2>Senior Interior Designer</h2>
-						<p>Experience Required:<span>2+ Year</span></p>
-						<p><i class="fa fa-map-marker" style="margin-right: 15px;"></i>Hyderabad/Telangana</p>
-						<button class="text-white"><a href="senior-interior-designer.html" class="text">View &
-								Apply</button></a>
-					</div>
-				</div>
-	
-				<div class="col-xs-12 col-lg-6" data-aos="fade-left">
-					<div class="card">
-						<h2>Intern</h2>
-						<p>Experience Required:<span>3+ months</span></p>
-						<p><i class="fa fa-map-marker" style="margin-right: 15px;"></i>Hyderabad/Telangana</p>
-						<button class="text-white"><a href="intern.html" class="text">View & Apply</button></a>
-					</div>
-				</div>
-	
-				<div class="col-xs-12 col-lg-6" data-aos="fade-right">
-					<div class="card">
-						<h2>Site Supervisor</h2>
-						<p>Experience Required:<span>1+ Year</span></p>
-						<p><i class="fa fa-map-marker" style="margin-right: 15px;"></i>Hyderabad/Telangana</p>
-						<button class="text-white"><a href="supervisor.html" class="text">View & Apply</button></a>
-					</div>
-				</div>
-	
-	
 		</div>
 	</div>
 
@@ -214,13 +216,14 @@
 			color: white;
 		}
 
-		.container {
+		/* .container {
 			text-align: start;
 			padding: 20px;
-		}
+		} */
 
-		.heading {
-			font-size: 2em;
+		.heading h3 {
+			padding-top: 30px;
+			font-size: 3em;
 			margin-bottom: 20px;
 			text-align: center;
 			font-weight: bold;
@@ -242,6 +245,7 @@
 			/* width: calc(50% - 20px); */
 			box-sizing: border-box;
 			border-color: black;
+			text-align: center;
 		}
 
 		.card h2 {
@@ -249,14 +253,9 @@
 			font-size: 1.7em;
 			margin: 2px;
 			margin-bottom: 15px;
+			font-weight: 600;
 		}
 
-		.card p {
-			margin-bottom: 15px;
-			line-height: 1.5;
-			margin: 3;
-
-		}
 
 		.card button {
 			background-color: black;
@@ -265,6 +264,8 @@
 			border: none;
 			border-radius: 4px;
 			cursor: pointer;
+			font-family: "Chub Gothic", sans-serif;
+			margin-top: 10px;
 		}
 
 		.card button:hover {
@@ -484,11 +485,11 @@
 					<div class="col-sm-4">
 						<div class="footer_main_3">
 							<ul>
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-								<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+								<li><a href="#"><i class="fa fa-facebook pkk"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter pkk"></i></a></li>
+								<li><a href="#"><i class="fa fa-instagram pkk"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus pkk"></i></a></li>
+								<li><a href="#"><i class="fa fa-youtube pkk"></i></a></li>
 							</ul>
 						</div>
 					</div>
