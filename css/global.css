@@ -544,3 +544,112 @@ h6 {
     display: block;
   }
 }
+
+.tooltip-container {
+  background: #b96f00;
+  /* background: linear-gradient(138deg, #b96f00); */
+  position: relative;
+  cursor: pointer;
+  font-size: 17px;
+  padding: 0.7em 0.7em;
+  border-radius: 50px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+.tooltip-container:hover {
+  background: #fff;
+  transition: all 0.9s;
+}
+.tooltip-container .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #fff;
+  transition: all 0.2s;
+}
+.tooltip-container:hover .text {
+  fill: #b96f00;
+  transition: all 0.9s;
+}
+
+
+/* Inicio do tooltip facebook */
+.tooltip2 {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  background: #fff !important;
+  fill: green;
+  padding: 10px;
+  border-radius: 50px;
+  transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip-container:hover .tooltip2 {
+  top: -100%;
+  opacity: 1;
+  visibility: visible;
+  background: green;
+  transform: translate(-50%, -5px);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tooltip-container:hover .tooltip2:hover {
+  background: green !important;
+  fill: #fff;
+}
+.tooltip4 {
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  transform: translateX(70%);
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  fill: #ee2a7b;
+  padding: 10px;
+  border-radius: 50px;
+  transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip-container:hover .tooltip4 {
+  top: -200%;
+  opacity: 1;
+  visibility: visible;
+  background: #fff;
+  transform: translate(-60%, -5px);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tooltip-container:hover .tooltip4:hover {
+  background: linear-gradient(#f9ce34, #ee2a7b, #6228d7);
+  fill: #fff;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  /* background-color: green; */
+  /* border-radius: 50%; */
+  /* padding: 1rem; */
+  z-index: 999;
+  display: grid;
+  place-items: center;
+}
+@media (max-width:998px){
+  .whatsapp{
+    right: 10px;
+  }
+}
