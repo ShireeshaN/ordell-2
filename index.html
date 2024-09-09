@@ -173,7 +173,7 @@
 
 	<section class="containers mt-5" id="center">
 		<div class="center">
-			<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+			<!-- <div class="carousel fade-carousel slide" data-drag="true" data-ride="carousel" data-interval="4000" id="bs-carousel">
 				<div class="overlay"></div>
 
 				<div class="carousel-inner curveslide footer-laptop">
@@ -230,7 +230,7 @@
 					</div>
 				</div>
 
-				<!-- Navigation Arrows -->
+				Navigation Arrows
 				<a class="carousel-control-prev" href="#bs-carousel" role="button" data-slide="prev">
 					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 					<span class="sr-only">Previous</span>
@@ -239,98 +239,47 @@
 					<span class="carousel-control-next-icon" aria-hidden="true"></span>
 					<span class="sr-only">Next</span>
 				</a>
-			</div>
+			</div> -->
+			<video preload="metadata" id="myCanvas" loading="lazy" class="video-player footer-mobile" muted loop autoplay playsinline>
+				<source data-src="media/large_screen_video.mp4" type="video/mp4" />
+				"Your browser does not support the video tag."
+			</video>
+			<video preload="metadata" id="myCanvas1" loading="lazy" class="video-player-mobile footer-laptop" muted loop autoplay playsinline>
+				<source data-src="media/small_screen_video.mp4" type="video/mp4" />
+				"Your browser does not support the video tag."
+			</video>
 		</div>
 
 	</section>
 
 	<style>
-		.carousel .carousel-inner {
-			position: relative;
-			max-width: 100%;
-			/* height: 100vh; */
-		}
+		.video-player {
+            width: 100%;
+            height: 100%;
+			border-radius: 50px;
+			display: block;
+            /* position: static; */
+            /* clip-path: circle(100% at 100% 40%); */
+        }
 
-		.carousel .item video {
-			width: 100%;
-			height: 100%;
-		}
-
-		.carousel {
-			position: relative;
-		}
-
-		.carousel-inner {
-			position: relative;
-		}
-
-		.carousel-control-prev,
-		.carousel-control-next {
-			position: absolute;
-			width: 5%;
-			height: 100%;
-			top: 0;
-			transform: translateY(-50%);
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			z-index: 10;
-		}
-
-		.carousel-control-prev {
-			left: 10px;
-			top: 55%;
-		}
-
-		.carousel-control-next {
-			right: -16px;
-			top: 55%;
-		}
-
-		@media (max-width:992px) {
-			.carousel-control-prev {
-				left: 10px;
-			}
-
-			.carousel-control-next {
-				right: 0;
-			}
-		}
-
-		.carousel-control-prev-icon,
-		.carousel-control-next-icon {
-			/* background-color: rgba(0, 0, 0, 0.5); */
-			/* border-radius: 50%; */
-			/* width: 40px;
-			height: 40px; */
-			background-size: 50%;
-			background-repeat: no-repeat;
-		}
-
-		.carousel-control-prev-icon {
-			background-image: url('img/left-arrow-svgrepo-com.svg');
-			width: 200px;
-			height: 100px;
-		}
-
-		.carousel-control-next-icon {
-			background-image: url('img/right-arrow-svgrepo-com.svg');
-			width: 200px;
-			height: 100px;
-		}
-
-		.carousel-indicators {
+		.video-player-mobile{
 			display: none;
-			/* Hides the dots */
 		}
 
-		@media (max-width:992px) {
-
-			.carousel-control-prev-icon,
-			.carousel-control-next-icon {
-				width: 400px;
+		@media (max-width: 992px) {
+			.video-player{
+				display: none;
 			}
-		}
+            .video-player-mobile {
+                width: 100%;
+				height: 100%;
+				display: block;
+				border-radius: 50px;
+				margin-block: 100px;
+            }
+        }
+
+		
 	</style>
 
 
@@ -411,6 +360,7 @@
 				/* Adjust padding for mobile view */
 				padding-top: 0px;
 				margin: 0;
+				margin-top: 80px;
 			}
 
 			.stat {
@@ -1054,6 +1004,17 @@
 					$(".navbar-toggle").click();
 				}
 			});
+		});
+
+		document.addEventListener('DOMContentLoaded', function () {
+            const video = document.getElementById('myCanvas');
+            const source = video.querySelector('source');
+            source.src = source.dataset.src;
+            video.load();
+			const video1 = document.getElementById('myCanvas1');
+            const source1 = video1.querySelector('source');
+            source1.src = source1.dataset.src;
+            video1.load();
 		});
 
 		// document.addEventListener('DOMContentLoaded', function () {

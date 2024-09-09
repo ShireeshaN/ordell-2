@@ -815,6 +815,7 @@ h4 a {
   .containers {
     height: 100vh; /* Adjust height for mobile view */
     padding: 20px 0; /* Add padding for spacing */
+    margin-top: 50px;
   }
 
   .center {
@@ -1198,6 +1199,7 @@ color: #fff; */
 @media (max-width:992px){
   .middles{
     padding-top: 90px;
+    margin-bottom: 80px;
   }
   .footer_1 ul{
     text-align: left;
