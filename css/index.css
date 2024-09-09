@@ -813,7 +813,7 @@ h4 a {
 
 @media (max-width: 768px) {
   .containers {
-    height: auto; /* Adjust height for mobile view */
+    height: 100vh; /* Adjust height for mobile view */
     padding: 20px 0; /* Add padding for spacing */
   }
 
