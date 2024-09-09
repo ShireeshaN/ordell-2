@@ -205,26 +205,26 @@
 
 				<div class="carousel-inner curveslide footer-mobile">
 					<div class="item slides active">
-						<video class="video-fluid" width="100%" autoplay muted loop>
-							<source src="./media/mobile_video_1.mp4" type="video/mp4">
+						<video class="video-fluid" width="100%" autoplay muted loop playsinline>
+							<source src="media/mobile_video_1.mp4" type="video/mp4">
 							Your browser does not support the video tag.
 						</video>
 					</div>
 					<div class="item slides">
-						<video class="video-fluid" width="100%" autoplay muted loop>
-							<source src="./media/mobile_video_2.mp4" type="video/mp4">
+						<video class="video-fluid" width="100%" autoplay muted loop playsinline>
+							<source src="media/mobile_video_2.mp4" type="video/mp4">
 							Your browser does not support the video tag.
 						</video>
 					</div>
 					<div class="item slides">
-						<video class="video-fluid" width="100%" autoplay muted loop>
-							<source src="./media/mobile_video_3.mp4" type="video/mp4">
+						<video class="video-fluid" width="100%" autoplay muted loop playsinline>
+							<source src="media/mobile_video_3.mp4" type="video/mp4">
 							Your browser does not support the video tag.
 						</video>
 					</div>
 					<div class="item slides">
-						<video class="video-fluid" width="100%" autoplay muted loop>
-							<source src="./media/mobile_video_4.mp4" type="video/mp4">
+						<video class="video-fluid" width="100%" autoplay muted loop playsinline>
+							<source src="media/mobile_video_4.mp4" type="video/mp4">
 							Your browser does not support the video tag.
 						</video>
 					</div>
@@ -309,13 +309,13 @@
 
 		.carousel-control-prev-icon {
 			background-image: url('img/left-arrow-svgrepo-com.svg');
-			width: 100px;
+			width: 200px;
 			height: 100px;
 		}
 
 		.carousel-control-next-icon {
 			background-image: url('img/right-arrow-svgrepo-com.svg');
-			width: 100px;
+			width: 200px;
 			height: 100px;
 		}
 
@@ -328,8 +328,7 @@
 
 			.carousel-control-prev-icon,
 			.carousel-control-next-icon {
-				width: 140px;
-				height: 140px;
+				width: 400px;
 			}
 		}
 	</style>
@@ -898,7 +897,8 @@
 
 							</ul>
 							<ul class="phone-list footer-mobile">
-								<li class="mb-3"><a class="fa fa-phone pkk" href="tel:+919550715185"><span class="textfooter">+91
+								<li class="mb-3"><a class="fa fa-phone pkk" href="tel:+919550715185"><span
+											class="textfooter">+91
 											9550715185</span></a></li><br>
 								<li><a class="fa fa-phone pkk" href="tel:+919949999129"><span class="textfooter">+91
 											9949999129</span></a></li>
@@ -1039,11 +1039,6 @@
 		</div>
 	</section>
 
-
-
-
-
-
 	<script src="js/classie.js"></script>
 	<script src="js/cbpAnimatedHeader.js"></script>
 	<script src="lib/wow/wow.min.js"></script>
@@ -1060,6 +1055,20 @@
 				}
 			});
 		});
+
+		// document.addEventListener('DOMContentLoaded', function () {
+		// 	const videos = document.querySelectorAll('video');
+		// 	const source = document.querySelector('source');
+		// 	source.src = source.dataset.src;
+		// 	// video.load();
+		// 	videos.forEach(video => {
+		// 		video.play();
+		// 		video.play().catch(error => {
+		// 			console.error("Autoplay prevented:", error);
+		// 		});
+		// 	});
+		// });
+
 	</script>
 
 
