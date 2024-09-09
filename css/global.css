@@ -583,7 +583,7 @@ h6 {
   background: #fff !important;
   fill: green;
   padding: 10px;
-  border-radius: 50px;
+  border-radius: 50%;
   transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
   z-index: 1;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -595,13 +595,13 @@ h6 {
   visibility: visible;
   background: green;
   transform: translate(-50%, -5px);
-  border-radius: 50px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.tooltip-container:hover .tooltip2:hover {
+.tooltip-container:hover .tooltip2 a:hover {
   background: green !important;
   fill: #fff;
 }
@@ -615,7 +615,7 @@ h6 {
   background: #fff;
   fill: #ee2a7b;
   padding: 10px;
-  border-radius: 50px;
+  border-radius: 50%;
   transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
   z-index: 1;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -627,12 +627,12 @@ h6 {
   visibility: visible;
   background: #fff;
   transform: translate(-60%, -5px);
-  border-radius: 50px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.tooltip-container:hover .tooltip4:hover {
+.tooltip-container:hover .tooltip4 a:hover {
   background: linear-gradient(#f9ce34, #ee2a7b, #6228d7);
   fill: #fff;
 }
