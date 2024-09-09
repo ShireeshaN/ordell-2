@@ -1199,7 +1199,7 @@ color: #fff; */
 @media (max-width:992px){
   .middles{
     padding-top: 90px;
-    margin-bottom: 80px;
+    /* margin-bottom: 80px; */
   }
   .footer_1 ul{
     text-align: left;
