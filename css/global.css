@@ -8,7 +8,9 @@ Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152
 body {
   font-family: "Roboto";
 }
-
+:root{
+  --primary: #e8bf86;
+}
 a {
 }
 a:hover {
@@ -123,12 +125,12 @@ section {
 #header .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #bf6900;
+  color: var(--primary);
   background: none;
   font-size: 12px;
 }
 #header .navbar-default .navbar-nav > li > a:hover {
-  color: #fecb38;
+  color: var(--primary);
 }
 #header .navbar-default .navbar-nav > li > a {
   color: #fff;
@@ -152,7 +154,7 @@ section {
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
   background: none;
-  color: #bf6900;
+  color: var(--primary);
 }
 .header_1 p a {
   text-decoration: none;
@@ -285,7 +287,7 @@ section {
   color: #fff;
 }
 .footer_main_2 p a {
-  color: #bf6900;
+  color: var(--primary);
 }
 .footer_main_2 p a:hover {
   color: #fff;
@@ -329,7 +331,7 @@ section {
     font-size: 22px;
   }
   #header .navbar-default .navbar-toggle .icon-bar {
-    background-color: #ffffff;
+    background-color: #000000;
   }
   #header .navbar-default .navbar-brand {
     padding-right: 10px;
@@ -504,7 +506,7 @@ h6 {
 }
 
 .pkk {
-  color: #bf6900;
+  color: var(--primary);
 }
 
 .exp-req {
@@ -546,8 +548,8 @@ h6 {
 }
 
 .tooltip-container {
-  background: #b96f00;
-  /* background: linear-gradient(138deg, #b96f00); */
+  background: var(--primary);
+  /* background: linear-gradient(138deg, var(--primary)); */
   position: relative;
   cursor: pointer;
   font-size: 17px;
@@ -563,11 +565,11 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  fill: #fff;
+  fill: #000;
   transition: all 0.2s;
 }
 .tooltip-container:hover .text {
-  fill: #b96f00;
+  fill: #000;
   transition: all 0.9s;
 }
 

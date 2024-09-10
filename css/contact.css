@@ -254,7 +254,8 @@ button {
     margin-top: 4px;
 }
 button:hover {
-    background-color: #BD9867;
+    background-color: var(--primary);
+    color: #000;
 }
 
 /* Media Queries for Mobile View */
