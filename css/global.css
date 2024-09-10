@@ -601,8 +601,11 @@ h6 {
   justify-content: center;
 }
 
-.tooltip-container:hover .tooltip2 a:hover {
+.tooltip-container:hover .tooltip2:hover {
   background: green !important;
+  fill: #fff;
+}
+.tooltip-container:hover .tooltip2:hover a{
   fill: #fff;
 }
 .tooltip4 {
@@ -632,8 +635,11 @@ h6 {
   align-items: center;
   justify-content: center;
 }
-.tooltip-container:hover .tooltip4 a:hover {
+.tooltip-container:hover .tooltip4:hover {
   background: linear-gradient(#f9ce34, #ee2a7b, #6228d7);
+  fill: #fff;
+}
+.tooltip-container:hover .tooltip4:hover a{
   fill: #fff;
 }
 
