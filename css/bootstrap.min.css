@@ -345,7 +345,7 @@ input,
 button,
 select,
 textarea {
-    font-family: "Montserrat";
+    font-family: 'Chub Gothic', sans-serif;
     font-size: inherit;
     line-height: inherit
 }
