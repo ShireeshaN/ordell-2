@@ -9,7 +9,7 @@ body {
   font-family: "Roboto";
 }
 :root{
-  --primary: #e8bf86;
+  --primary: #edc485;
 }
 a {
 }
@@ -441,7 +441,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Chub Gothic, sans-serif;
+  font-family: 'Chub Gothic', sans-serif;
   font-weight: 500;
   color: #000;
   margin: 0;

@@ -187,7 +187,7 @@ Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152
 .contact-section h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #1f2b7b;
+    /* color: #1f2b7b; */
 }
 
 form {
@@ -215,7 +215,7 @@ label {
     font-family: 'Chub Gothic', sans-serif;
 }
 
-input, textarea {
+input, textarea, select {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
