@@ -8,7 +8,7 @@ Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152
 body {
   font-family: "Roboto";
 }
-:root{
+:root {
   --primary: #edc485;
 }
 a {
@@ -21,7 +21,7 @@ p {
   font-size: 19px;
 }
 .textfooter {
-  color: #fff;
+  color: #fff !important;
   margin-bottom: 10px;
   font-size: 16px;
   font-weight: 500;
@@ -287,7 +287,13 @@ section {
   color: #fff;
 }
 .footer_main_2 p a {
-  color: var(--primary);
+  background-image: linear-gradient(90deg, #a18653, #efc281);
+  -webkit-background-clip: text;
+  /* Apply the gradient to the text */
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  /* Make the text itself transparent */
+  background-clip: text;
 }
 .footer_main_2 p a:hover {
   color: #fff;
@@ -441,7 +447,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Chub Gothic', sans-serif;
+  font-family: "Chub Gothic", sans-serif;
   font-weight: 500;
   color: #000;
   margin: 0;
@@ -458,7 +464,6 @@ h6 {
   color: white;
 
   font-family: "Chub Gothic", sans-serif;
-
 }
 
 .iconss {
@@ -506,7 +511,13 @@ h6 {
 }
 
 .pkk {
-  color: var(--primary);
+  background-image: linear-gradient(90deg, #a18653, #efc281);
+  -webkit-background-clip: text;
+  /* Apply the gradient to the text */
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  /* Make the text itself transparent */
+  background-clip: text;
 }
 
 .exp-req {
@@ -516,33 +527,32 @@ h6 {
   margin: 3;
 }
 
-.location{
+.location {
   font-size: 1.3rem;
 }
-.footer-laptop{
+.footer-laptop {
   display: block;
 }
-.footer-mobile{
+.footer-mobile {
   display: none;
 }
-@media (max-width:992px){
-  .footer_main_3 ul{
+@media (max-width: 992px) {
+  .footer_main_3 ul {
     text-align: left;
   }
-  .textfooter{
+  .textfooter {
     text-align: left;
   }
-  .footer-laptop{
+  .footer-laptop {
     display: none;
   }
-  .footer-mobile{
+  .footer-mobile {
     display: block;
     display: flex;
     flex-direction: column;
-
   }
 
-  .phone_list br{
+  .phone_list br {
     display: block;
   }
 }
@@ -572,7 +582,6 @@ h6 {
   fill: #000;
   transition: all 0.9s;
 }
-
 
 /* Inicio do tooltip facebook */
 .tooltip2 {
@@ -607,7 +616,7 @@ h6 {
   background: green !important;
   fill: #fff;
 }
-.tooltip-container:hover .tooltip2:hover a{
+.tooltip-container:hover .tooltip2:hover a {
   fill: #fff;
 }
 .tooltip4 {
@@ -641,7 +650,7 @@ h6 {
   background: linear-gradient(#f9ce34, #ee2a7b, #6228d7);
   fill: #fff;
 }
-.tooltip-container:hover .tooltip4:hover a{
+.tooltip-container:hover .tooltip4:hover a {
   fill: #fff;
 }
 
@@ -656,18 +665,22 @@ h6 {
   display: grid;
   place-items: center;
 }
-@media (max-width:998px){
-  .whatsapp{
+@media (max-width: 998px) {
+  .whatsapp {
     right: 10px;
   }
 }
 
-.footer_main_3 .footer{
+.footer_main_3 .footer {
   justify-content: flex-end;
 }
 
-@media (max-width:992px) {
-  .footer_main_3 .footer{
+@media (max-width: 992px) {
+  .footer_main_3 .footer {
     justify-content: flex-start;
   }
+}
+
+.main-heading {
+  background-image: linear-gradient(90deg, #a18653, #efc281);
 }
