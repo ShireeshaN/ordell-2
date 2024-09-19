@@ -187,7 +187,7 @@ Licence: <a href="http://www.templateonweb.com/terms.php?v=content&contentid=152
 .contact-section h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #1f2b7b;
+    /* color: #1f2b7b; */
 }
 
 form {
@@ -212,14 +212,16 @@ form {
 label {
     margin-bottom: 5px;
     color: #333;
+    font-family: 'Chub Gothic', sans-serif;
 }
 
-input, textarea {
+input, textarea, select {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 13px;
     transition: border-color 0.3s;
+    font-family: 'Chub Gothic', sans-serif;
 }
 
 input:focus, textarea:focus {
@@ -246,9 +248,14 @@ button {
     transition: background-color 0.3s;
     padding-left: 4px;
 }
-
+.upload-file{
+    border: none;
+    padding-left: 0;
+    margin-top: 4px;
+}
 button:hover {
-    background-color: #BD9867;
+    background-color: var(--primary);
+    color: #000;
 }
 
 /* Media Queries for Mobile View */

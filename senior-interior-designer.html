@@ -27,6 +27,27 @@
 	<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
 	<script src="js/jquery-2.1.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+
+	<!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+
+	    <!-- Animate.css -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+		<!-- wow.js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+	<!-- Include Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<style>
+	body{
+		font-family: 'Chub Gothic',sans-serif;
+	}
+</style>
 </head>
 
 <body>
@@ -48,7 +69,7 @@
                    <!-- Collect the nav links, forms, and other content for toggling -->
                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
-                           <li class="active"><a href="index.html">HOME</a></li>
+                           <li class=""><a href="index.html">HOME</a></li>
                            <li><a href="about.html">ABOUT</a></li>
                            <!-- Portfolio Dropdown -->
                            <li class="dropdown">
@@ -61,35 +82,33 @@
                                    <li><a href="gallery.html">GALLERY</a></li>
                                </ul>
                            </li>
-                           <li><a href="careers.html">CAREERS</a></li>
+                           <li class="active"><a href="careers.html">CAREERS</a></li>
                            
                            <li><a href="contact.html">CONTACT</a></li>
                            
-                           <li class="well_1 clearfix"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                           <li class="well_1 clearfix"><a href="#"><i class="fa fa-instagram"></i></a></li>
-                           <li class="well_1 clearfix"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                          
                    </div><!-- /.navbar-collapse -->
                </div><!-- /.container-fluid -->
            </nav>
        </section>
-	<section >
-		<div class="container">
+	<!-- <section >
+		<div class="container-fluid" style="margin-bottom: 10px;">
 			<h1 class="heading">Heading</h1>
 		</div>
-	</section>
+	</section> -->
 
 	
 
 	<div class="container">
     <!-- Main Heading Section -->
-    <div class="main-heading">
+    <div class="main-heading" data-aos="fade-down">
         <h1>Senior Interior Designer</h1>
     </div>
 
     <!-- Subheading and Points Section -->
     <div class="content-section">
-        <h2 class="sub-heading">Key Responsibilities:</h2>
-        <ul class="points">
+        <h2 class="sub-heading" data-aos="fade-left">Key Responsibilities:</h2>
+        <ul class="points" data-aos="fade-right">
             <li>Develop accurate and detailed 3D models based on design briefs, concepts, or technical drawings.</li>
             <li>Apply textures, materials, and shaders to 3D models to achieve the desired visual effects and realism.</li>
             <li>Set up lighting and rendering parameters to create high-quality, photorealistic images or animations.</li>
@@ -101,8 +120,8 @@
 			<li>Organize and manage 3D assets, ensuring proper file structure and documentation for easy access and future reference.</li>
         </ul>
 
-		<h2 class="sub-heading">Requirements:</h2>
-        <ul class="points">
+		<h2 class="sub-heading" data-aos="fade-right">Requirements:</h2>
+        <ul class="points" data-aos="fade-left">
             <li>Bachelor’s degree in business, Marketing, or a related field.</li>
             <li>Strong knowledge of industry-standard 3D modeling, texturing, and rendering software such as Autodesk Maya, 3ds Max, Blender, Cinema 4D, or similar.</li>
             <li>Experience in animating 3D models, including rigging, character animation, and motion graphics.</li>
@@ -120,7 +139,7 @@
 	/* Container */
 .container {
     width: 100%;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 /* Main Heading */
@@ -130,6 +149,7 @@
     padding: 18px 0;
     text-align: center;
     width: 100%;
+	margin-top: 70px;
 }
 
 .main-heading h1 {
@@ -175,6 +195,8 @@
     font-size: 20px; /* Size of the button text */
     cursor: pointer; /* Changes cursor to pointer on hover */
     transition: background-color 0.3s; /* Smooth transition for background color */
+	font-family: 'Chub Gothic', sans-serif;
+	border-radius: 1rem;
 }
 
 .action-button:hover {
@@ -244,6 +266,7 @@
 		padding: 20px;
 		border-radius: 8px;
 		border: 1px solid #ddd;
+		font-family: 'Chub Gothic', sans-serif;
 	}
 
 	.modal-header {
@@ -361,6 +384,12 @@
 
 	
 </script>
+<script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+	<script>AOS.init()</script>
+	<script>
+		new WOW().init();
+	</script>
 
 </body>
 
