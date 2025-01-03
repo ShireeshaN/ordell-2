@@ -190,7 +190,7 @@
 
 	<div class="contact-section">
 		<h2 class="contact">CONTACT US</h2>
-		<form id="contactForm">
+		<!-- <form id="contactForm">
 			<div class="form-row" data-aos="fade-right">
 				<div class="form-group">
 					<label for="name">Your Name</label>
@@ -200,7 +200,7 @@
 				<div class="form-group" data-aos="fade-left">
 					<label for="email">Your Email</label>
 					<input type="email" placeholder="Your Email *" id="email" name="email" required>
-					<!-- <span class="error-message" id="emailError">This field is required</span> -->
+					
 					<span class="error-message" id="emailError">Please enter a valid Gmail address</span>
 				</div>
 			</div>
@@ -211,7 +211,7 @@
 					<span class="error-message" id="phoneError">Please enter a valid mobile number</span>
 				</div>
 				<div class="form-group" data-aos="fade-left">
-					<label for="Property">Property Type;</label>
+					<label for="Property">Property Type</label>
 					<select id="Property" name="colors" required>
 						<option>Choose a Property Type</option>
 						<option value="1BHK">1BHK</option>
@@ -223,12 +223,7 @@
 						<option value="Other">Other</option>
 					</select>
 				</div>
-				<div class="form-group" data-aos="fade-left">
-					<label for="file-upload" class="container-btn-file">
-						Upload File
-						<input id="file-upload" class="upload-file" name="text" type="file" />
-					</label>
-				</div>
+				
 			</div>
 			<div class="form-group" data-aos="fade-down">
 				<label for="message">Let Us Know Your Requirements</label>
@@ -236,14 +231,99 @@
 				<span class="error-message" id="messageError">This field is required</span>
 			</div>
 			<button class="send-btn" type="submit" data-aos="fade-right">Send Message</button>
-		</form>
+		</form> -->
+
+		<form method="post" action="//submit.form" onSubmit="return validateForm();">
+			<div class="form-row" data-aos="fade-right">
+				<div style="padding-bottom: 18px;">Name<span style="color: red;"> *</span><br />
+					<input type="text" id="data_1" name="data_1" class="form-control" />
+				</div>
+				<div style="padding-bottom: 18px;">Email<span style="color: red;"> *</span><br />
+					<input type="text" id="data_4" name="data_4" class="form-control" />
+				</div>
+			</div>
+			<div class="form-row">
+				<div style="padding-bottom: 18px;">Phone Number<span style="color: red;"> *</span><br />
+					<input type="number" id="data_5" name="data_5" class="form-control" />
+				</div>
+				<div style="padding-bottom: 18px;">Property Type<br />
+					<select id="data_7" name="data_7" class="form-control">
+						<option>1BHK</option>
+						<option>2BHK</option>
+						<option>3BHK</option>
+						<option>4BHK</option>
+						<option>Villa</option>
+						<option>Commercial</option>
+						<option>Others</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group" data-aos="fade-down">
+				<div style="padding-bottom: 18px;">Your Message<br />
+					<textarea id="data_6" false name="data_6" rows="3" class="form-control"></textarea>
+				</div>
+				<div style="padding-bottom: 18px;"><input name="skip_Submit" class="send-btn" value="Submit"
+						type="submit" /></div>
+			</div>
+
+			<div style="float:right"><a href="https://www.100forms.com" id="lnk100" title="form to email">form to
+					email</a></div>
+			<script src="https://www.100forms.com/js/FORMKEY:UQJ5XSZZBSLJ" type="text/javascript"></script>
+
+	</form>
+
+	<script type="text/javascript">
+		function validateForm() {
+			if (isEmpty(document.getElementById('data_1').value.trim())) {
+				alert('Name is required!');
+				return false;
+			}
+			if (isEmpty(document.getElementById('data_4').value.trim())) {
+				alert('Email is required!');
+				return false;
+			}
+			if (!validateEmail(document.getElementById('data_4').value.trim())) {
+				alert('Email must be a valid email address!');
+				return false;
+			}
+			if (isEmpty(document.getElementById('data_5').value.trim())) {
+				alert('Phone Number is required!');
+				return false;
+			}
+			return true;
+		}
+		function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+		function validateEmail(email) {
+			var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+			return isEmpty(email) || re.test(email);
+		}
+	</script>
+
+
+
 	</div>
 	<style>
+		form {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+
+		#lnk100 {
+			color: white;
+		}
+
+		.form-row div {
+			width: 100%;
+			padding: 1rem;
+		}
+
 		.send-btn {
 			font-family: 'Chub Gothic', sans-serif;
 			width: max-content;
 			padding: 10px 15px;
 			margin-left: 10px;
+			background-color: black;
+			color: white;
 		}
 
 		.contact {
